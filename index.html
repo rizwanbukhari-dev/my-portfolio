@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syed Rizwan Bukhari | Computer Science Student & Aspiring Developer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Personal portfolio of Syed Rizwan Bukhari - Computer Science & Engineering diploma student from Budgam, Jammu & Kashmir. Aspiring software developer and cybersecurity enthusiast.">
+  <meta name="keywords" content="Syed Rizwan Bukhari, Rizwan Bukhari, Portfolio, Computer Science, Ganderbal, Jammu and Kashmir, Software Developer, Web Development, Cybersecurity, Linux, Python">
+  <meta name="author" content="Syed Rizwan Bukhari">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Syed Rizwan Bukhari | Developer Portfolio">
+  <meta property="og:description" content="Computer Science & Engineering Diploma Student | Aspiring Software Developer & Cybersecurity Enthusiast">
+  <meta property="og:image" content="assets/images/rizwan-photo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- =================================================================
+       Sticky Navigation Bar
+       ================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-top-row">
+        <!-- Logo / Name on Left -->
+        <a href="#home" class="nav-brand" aria-label="Syed Rizwan Bukhari">
+          <div class="nav-brand-avatar">
+            <img src="assets/images/rizwan-photo.jpg" alt="Syed Rizwan Bukhari">
+            <span class="nav-brand-dot" title="Available for projects"></span>
+          </div>
+          <div class="nav-brand-text">
+            <span class="nav-brand-name">Syed Rizwan <span class="nav-brand-accent">Bukhari</span></span>
+            <span class="nav-brand-role">CS&amp;E &bull; Budgam, J&amp;K</span>
+          </div>
+        </a>
+
+        <!-- Top Right Side: WhatsApp, Theme Toggle & Touchable Style Menu Lines Button -->
+        <div class="nav-actions">
+          <a href="https://wa.me/916005320065?text=Hi%20Syed%20Rizwan,%20I%20viewed%20your%20portfolio!" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm nav-action-whatsapp" style="color: #25D366; border-color: rgba(37, 211, 102, 0.35); padding: 7px 14px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            <!-- Sun Icon (for dark mode) -->
+            <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (for light mode) -->
+            <svg id="theme-icon-moon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Touchable Style Menu Button with 3 lines -->
+          <button class="menu-lines-btn" id="menu-lines-btn" aria-label="Open navigation menu" aria-expanded="false" title="Menu">
+            <span class="menu-btn-label">Menu</span>
+            <span class="menu-lines-box" aria-hidden="true">
+              <span class="menu-line line-1"></span>
+              <span class="menu-line line-2"></span>
+              <span class="menu-line line-3"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       Slide-out Navigation Drawer & Backdrop (Opened by Touchable Lines)
+       ================================================================= -->
+  <div class="menu-drawer-backdrop" id="menu-drawer-backdrop" aria-hidden="true"></div>
+
+  <aside class="menu-drawer" id="menu-drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <div class="menu-drawer-header">
+      <div class="drawer-brand">
+        <div class="drawer-avatar">
+          <img src="assets/images/rizwan-photo.jpg" alt="Syed Rizwan Bukhari">
+          <span class="drawer-status-dot" title="Available"></span>
+        </div>
+        <div class="drawer-brand-text">
+          <span class="drawer-name">Syed Rizwan <span class="nav-brand-accent">Bukhari</span></span>
+          <span class="drawer-role">CS&amp;E Student &bull; Budgam, J&amp;K</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close menu" title="Close Menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu-drawer-nav">
+      <p class="drawer-section-label">PORTFOLIO NAVIGATION</p>
+      <nav class="drawer-links" id="drawer-links">
+        <a href="#home" class="drawer-link active" data-view="view-home">
+          <span class="drawer-link-num">01</span>
+          <span class="drawer-link-title">Home (Overview)</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#about" class="drawer-link" data-view="view-about">
+          <span class="drawer-link-num">02</span>
+          <span class="drawer-link-title">About Me &amp; Terminal</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#education" class="drawer-link" data-view="view-education">
+          <span class="drawer-link-num">03</span>
+          <span class="drawer-link-title">Education Timeline</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#skills" class="drawer-link" data-view="view-skills">
+          <span class="drawer-link-num">04</span>
+          <span class="drawer-link-title">Technical Skills &amp; Learning</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#projects" class="drawer-link" data-view="view-projects">
+          <span class="drawer-link-num">05</span>
+          <span class="drawer-link-title">Featured Projects</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#journey" class="drawer-link" data-view="view-journey">
+          <span class="drawer-link-num">06</span>
+          <span class="drawer-link-title">Learning Journey</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#services" class="drawer-link" data-view="view-services">
+          <span class="drawer-link-num">07</span>
+          <span class="drawer-link-title">Capabilities &amp; Services</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#certificates" class="drawer-link" data-view="view-certificates">
+          <span class="drawer-link-num">08</span>
+          <span class="drawer-link-title">Certifications &amp; Achievements</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#github" class="drawer-link" data-view="view-github">
+          <span class="drawer-link-num">09</span>
+          <span class="drawer-link-title">GitHub Activity</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+        <a href="#contact" class="drawer-link" data-view="view-contact">
+          <span class="drawer-link-num">10</span>
+          <span class="drawer-link-title">Contact &amp; Connect</span>
+          <svg class="drawer-link-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </nav>
+    </div>
+
+    <div class="menu-drawer-footer">
+      <p class="drawer-section-label">FAST CONTACT</p>
+      <div class="drawer-actions">
+        <a href="https://wa.me/916005320065?text=Hi%20Syed%20Rizwan,%20I%20viewed%20your%20portfolio!" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm drawer-action-btn drawer-whatsapp-btn" style="color: #25D366; border-color: rgba(37, 211, 102, 0.35);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span>WhatsApp (+91 6005320065)</span>
+        </a>
+        <a href="mailto:syedrizwanbukhari18@gmail.com" class="btn btn-outline btn-sm drawer-action-btn drawer-email-btn" style="color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.35);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>syedrizwanbukhari18@gmail.com</span>
+        </a>
+      </div>
+      <div class="drawer-socials">
+        <a href="https://linkedin.com/in/Rizwan Bukhari-dev" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://instagram.com/rizwanbukhari.dev" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =================================================================
+         VIEW 1: HOME (THE STARTING PAGE)
+         ================================================================= -->
+    <div class="portfolio-view active" id="view-home">
+      <!-- =================================================================
+           Hero Section
+           ================================================================= -->
+      <section class="section hero-section" id="home">
+        <div class="container hero-grid">
+          <!-- Hero Left Column: Intro -->
+          <div class="hero-content">
+            <div class="hero-badge-row">
+              <span class="hero-status-badge">
+                <span class="pulse-dot"></span>
+                Open to Opportunities &amp; Learning
+              </span>
+              <span class="hero-edu-badge">
+                🎓 Diploma in CS&amp;E &bull; 5th Semester
+              </span>
+            </div>
+
+            <div class="hero-greeting">Hi, I'm</div>
+            <h1 class="hero-title">
+              <span class="gradient-text">Syed Rizwan Bukhari</span>
+            </h1>
+            
+            <h2 class="hero-subtitle">
+              Computer Science &amp; Engineering Student | Aspiring Software Developer &amp; Cybersecurity Enthusiast
+            </h2>
+
+            <p class="hero-description">
+              Building my skills through programming, web development, Linux, cybersecurity and practical projects. Focused on crafting reliable software solutions and exploring modern system security.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary" id="btn-hero-projects">
+                <span>View My Projects</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary" id="btn-hero-contact">
+                <span>Contact Me</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+
+              <button class="btn btn-outline" id="btn-hero-cv" data-modal-target="modal-cv">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download CV</span>
+              </button>
+            </div>
+
+            <!-- Quick Social Icons Row -->
+            <div class="hero-social-row">
+              <a href="https://wa.me/916005320065?text=Hi%20Syed%20Rizwan,%20I%20viewed%20your%20portfolio!" class="social-icon-btn contact-whatsapp-link" target="_blank" rel="noopener noreferrer" data-tooltip="WhatsApp (+91 6005320065)" aria-label="Chat on WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </a>
+
+              <a href="mailto:syedrizwanbukhari18@gmail.com" class="social-icon-btn contact-email-link" data-tooltip="Send Email" aria-label="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+
+              <a href="https://www.linkedin.com/in/rizwan-bukhari-dev" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-tooltip="LinkedIn" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+
+              <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-tooltip="GitHub" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+
+              <a href="https://www.instagram.com/rizwanbukhari.dev/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" data-tooltip="Instagram" aria-label="Instagram Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Genuine Photo Card -->
+          <div class="hero-visual-card">
+            <div class="hero-image-wrapper">
+              <div class="hero-image-inner">
+                <img src="assets/images/rizwan-photo.jpg" alt="Syed Rizwan Bukhari" id="hero-profile-photo">
+              </div>
+
+              <!-- Floating Badges -->
+              <div class="floating-badge floating-badge-1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Software &amp; Web Dev</span>
+              </div>
+
+              <div class="floating-badge floating-badge-2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Cybersecurity Enthusiast</span>
+              </div>
+
+              <div class="floating-badge floating-badge-3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                </svg>
+                <span>Linux &amp; Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Starting Page: Explore Portfolio via Menu Bar -->
+      <section class="home-explore-section">
+        <div class="container">
+          <div class="home-explore-header">
+            <div class="section-tag">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Explore My Portfolio</span>
+            </div>
+            <h2 class="section-title">What Would You Like to See?</h2>
+            <p class="section-subtitle">
+              Choose any section below or tap the touchable <strong>Menu</strong> button at the top-right to browse.
+            </p>
+          </div>
+
+          <div class="home-explore-grid">
+            <!-- Card 1: About Me -->
+            <a href="#about" class="home-explore-card">
+              <div>
+                <div class="explore-card-icon">👨‍💻</div>
+                <h3 class="explore-card-title">About Me &amp; Terminal</h3>
+                <p class="explore-card-desc">
+                  Learn about my background, career goals in software &amp; cybersecurity, and interact with my live Linux shell emulator.
+                </p>
+              </div>
+              <span class="explore-card-link">
+                <span>View About Me</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- Card 2: Education -->
+            <a href="#education" class="home-explore-card">
+              <div>
+                <div class="explore-card-icon">🎓</div>
+                <h3 class="explore-card-title">Education &amp; Journey</h3>
+                <p class="explore-card-desc">
+                  Diploma in Computer Science &amp; Engineering at Govt Polytechnic College Ganderbal (5th Semester) and academic timeline.
+                </p>
+              </div>
+              <span class="explore-card-link">
+                <span>View Education</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- Card 3: Skills -->
+            <a href="#skills" class="home-explore-card">
+              <div>
+                <div class="explore-card-icon">⚡</div>
+                <h3 class="explore-card-title">Technical Skills &amp; Learning</h3>
+                <p class="explore-card-desc">
+                  Honest skill proficiencies across Python, Linux, Web Technologies, DBMS, and active cybersecurity topics.
+                </p>
+              </div>
+              <span class="explore-card-link">
+                <span>Explore Skills</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- Card 4: Projects -->
+            <a href="#projects" class="home-explore-card">
+              <div>
+                <div class="explore-card-icon">🚀</div>
+                <h3 class="explore-card-title">Featured Projects &amp; GitHub</h3>
+                <p class="explore-card-desc">
+                  Explore PDFs Hub, KCF Social Media Analytics Dashboard, Developer Portfolio, and live GitHub activity.
+                </p>
+              </div>
+              <span class="explore-card-link">
+                <span>View Projects</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- Card 5: Contact -->
+            <a href="#contact" class="home-explore-card">
+              <div>
+                <div class="explore-card-icon">💬</div>
+                <h3 class="explore-card-title">Contact &amp; Connect</h3>
+                <p class="explore-card-desc">
+                  Direct WhatsApp chat (+91 6005320065), Email (syedrizwanbukhari18@gmail.com), contact form, and printable CV.
+                </p>
+              </div>
+              <span class="explore-card-link">
+                <span>Get In Touch</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Menu Tip -->
+          <div class="home-menu-tip">
+            <div class="home-menu-tip-text">
+              <span>✨</span>
+              <span>Looking for specific information? Tap the <strong>Menu</strong> button at the top-right corner to jump directly to any section.</span>
+            </div>
+            <button class="btn btn-outline btn-sm" id="btn-home-open-menu" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">
+              <span>Open Menu</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div> <!-- /view-home -->
+
+    <!-- =================================================================
+         VIEW 2: ABOUT ME
+         ================================================================= -->
+    <div class="portfolio-view" id="view-about">
+      <div class="view-header-bar">
+        <div class="container view-header-content">
+          <a href="#home" class="view-back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Back to Home</span>
+          </a>
+          <div class="view-breadcrumb">
+            <a href="#home">Home</a>
+            <span>/</span>
+            <span class="crumb-active">About Me</span>
+          </div>
+        </div>
+      </div>
+
+    <!-- =================================================================
+         About Me Section
+         ================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>About Me</span>
+          </div>
+          <h2 class="section-title">Motivated Student &amp; Developing Developer</h2>
+          <p class="section-subtitle">
+            Grounded in core engineering principles, driven by curiosity, and dedicated to practical software craft.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Bio & Quick Facts -->
+          <div class="about-card">
+            <div>
+              <blockquote class="about-bio-text">
+                "I am Syed Rizwan Bukhari, a Computer Science &amp; Engineering diploma student from Budgam, Jammu &amp; Kashmir. I am passionate about technology, programming, web development and cybersecurity. I enjoy learning new technologies and building practical projects that can solve real-world problems. I am currently improving my skills in programming, Linux, web development and cybersecurity while working on personal projects and preparing for my future career in technology."
+              </blockquote>
+
+              <div class="about-info-grid">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Location</div>
+                    <div class="info-value">Budgam, Jammu &amp; Kashmir, India</div>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Current College</div>
+                    <div class="info-value">Govt Polytechnic College Ganderbal</div>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 14 14"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Current Semester</div>
+                    <div class="info-value">5th Semester (CS&amp;E)</div>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Career Goal</div>
+                    <div class="info-value">Software &amp; Cybersecurity Professional</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+                <strong>Long-Term Objective:</strong> To become a skilled software/cybersecurity professional while continuing my higher education, making impactful contributions to practical tooling and digital safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Developer Terminal -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <div class="terminal-title">rizwan@budgam-linux: ~ (bash)</div>
+              <div style="font-size:0.75rem; color:var(--text-subtle);">interactive</div>
+            </div>
+
+            <div class="terminal-body" id="term-body">
+              <div class="term-line">
+                <span class="term-prompt">rizwan@budgam:~$</span> <span class="term-cmd">whoami</span>
+              </div>
+              <div class="term-line term-output">
+                User: Syed Rizwan Bukhari<br>
+                Status: Computer Science &amp; Engineering Diploma Student (5th Sem)<br>
+                Institute: Government Polytechnic College Ganderbal<br>
+                Location: Budgam, Jammu &amp; Kashmir, India
+              </div>
+
+              <div class="term-line">
+                <span class="term-prompt">rizwan@budgam:~$</span> <span class="term-cmd">cat interests.txt</span>
+              </div>
+              <div class="term-line term-output">
+                &bull; Software &amp; Web Development (Building usable tools)<br>
+                &bull; Linux Administration &amp; CLI mastery<br>
+                &bull; Cybersecurity &amp; Ethical Hacking Fundamentals<br>
+                &bull; Continuous learning and real-world problem solving
+              </div>
+
+              <div class="term-line">
+                <span class="term-prompt">rizwan@budgam:~$</span> <span class="term-cmd">echo $GOAL</span>
+              </div>
+              <div class="term-line term-output">
+                "Become a skilled software and cybersecurity professional while advancing higher education."
+              </div>
+            </div>
+
+            <!-- Terminal Interactive Input -->
+            <div style="padding: 12px 18px; background: #0c121e; border-top: 1px solid rgba(255, 255, 255, 0.08); display:flex; align-items:center; gap: 8px;">
+              <span class="term-prompt" style="font-size: 0.85rem;">rizwan@budgam:~$</span>
+              <input type="text" id="term-input" placeholder="Type 'help', 'skills', 'education'..." style="background:transparent; border:none; color:#f8fafc; font-family:var(--font-mono); font-size:0.85rem; width:100%; outline:none;">
+            </div>
+
+            <!-- Quick Command Buttons -->
+            <div style="padding: 8px 18px; background: #080d15; display:flex; gap: 8px; flex-wrap:wrap; font-size: 0.75rem;">
+              <span style="color:var(--text-muted); align-self:center;">Try:</span>
+              <button class="term-quick-cmd" data-cmd="whoami" style="color:var(--accent-cyan); text-decoration:underline;">whoami</button>
+              <button class="term-quick-cmd" data-cmd="skills" style="color:var(--accent-cyan); text-decoration:underline;">skills</button>
+              <button class="term-quick-cmd" data-cmd="education" style="color:var(--accent-cyan); text-decoration:underline;">education</button>
+              <button class="term-quick-cmd" data-cmd="interests" style="color:var(--accent-cyan); text-decoration:underline;">interests</button>
+              <button class="term-quick-cmd" data-cmd="contact" style="color:var(--accent-cyan); text-decoration:underline;">contact</button>
+              <button class="term-quick-cmd" data-cmd="clear" style="color:var(--accent-rose); text-decoration:underline;">clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-about -->
+
+  <!-- =================================================================
+       VIEW 3: EDUCATION TIMELINE
+       ================================================================= -->
+  <div class="portfolio-view" id="view-education">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Education</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <section class="section" id="education" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic Background</span>
+          </div>
+          <h2 class="section-title">Education Timeline</h2>
+          <p class="section-subtitle">
+            Building solid foundations in Computer Science, engineering coursework, and logical thinking.
+          </p>
+        </div>
+
+        <div class="education-timeline">
+          <!-- Education 1 -->
+          <div class="edu-item">
+            <div class="edu-marker">
+              <div class="edu-marker-inner"></div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-top-meta">
+                <span class="edu-period">Present &bull; Currently in 5th Semester</span>
+                <span class="edu-badge-status">In Progress</span>
+              </div>
+              <h3 class="edu-degree">Diploma in Computer Science &amp; Engineering</h3>
+              <div class="edu-institution">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18"></path>
+                  <path d="M5 21V7l8-4 8 4v14"></path>
+                  <path d="M9 10a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v11"></path>
+                </svg>
+                <span>Government Polytechnic College Ganderbal</span>
+              </div>
+              <p class="edu-desc">
+                Enrolled in rigorous engineering diploma curriculum covering programming, system design, relational databases, data structures, computer networks, and operating system architectures. Actively participating in lab work and engineering practicals.
+              </p>
+              <div class="edu-tags-row">
+                <span class="edu-tag">Computer Science &amp; Engg</span>
+                <span class="edu-tag">5th Semester</span>
+                <span class="edu-tag">DBMS &amp; SQL</span>
+                <span class="edu-tag">Operating Systems &amp; Linux</span>
+                <span class="edu-tag">Programming in C / Java / Python</span>
+                <span class="edu-tag">Computer Networks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2 -->
+          <div class="edu-item">
+            <div class="edu-marker">
+              <div class="edu-marker-inner"></div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-top-meta">
+                <span class="edu-period">Secondary Schooling</span>
+                <span class="edu-badge-status" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3);">Completed</span>
+              </div>
+              <h3 class="edu-degree">Class 10th</h3>
+              <div class="edu-institution">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18"></path>
+                  <path d="M5 21V7l8-4 8 4v14"></path>
+                </svg>
+                <span>HS Chewdara</span>
+              </div>
+              <p class="edu-desc">
+                Successfully completed secondary education with a strong academic orientation towards science, mathematics, and analytical problem solving, establishing the groundwork for engineering studies.
+              </p>
+              <div class="edu-tags-row">
+                <span class="edu-tag">Class 10th</span>
+                <span class="edu-tag">Mathematics</span>
+                <span class="edu-tag">Science</span>
+                <span class="edu-tag">HS Chewdara</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-education -->
+
+  <!-- =================================================================
+       VIEW 4: TECHNICAL SKILLS & LEARNING
+       ================================================================= -->
+  <div class="portfolio-view" id="view-skills">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Technical Skills &amp; Learning</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Technical Abilities</span>
+          </div>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            An honest assessment of my current hands-on competencies categorized into practical skill levels.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="skills-filter-nav">
+          <button class="skill-filter-btn active" data-filter="all">All Skills</button>
+          <button class="skill-filter-btn" data-filter="programming">Programming</button>
+          <button class="skill-filter-btn" data-filter="database">Database</button>
+          <button class="skill-filter-btn" data-filter="os">Operating Systems</button>
+          <button class="skill-filter-btn" data-filter="other">Other / Tools</button>
+        </div>
+
+        <!-- Level Legend -->
+        <div class="skills-legend-bar">
+          <div class="legend-item">
+            <span class="legend-badge level-intermediate">Intermediate</span>
+            <span>Solid hands-on practice &amp; applied in projects</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-badge level-working">Working Knowledge</span>
+            <span>Comfortable with practical usage &amp; core concepts</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-badge level-learning">Learning</span>
+            <span>Actively exploring &amp; strengthening</span>
+          </div>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Programming: C -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div>
+                <div class="skill-name">C</div>
+                <div class="skill-category">Programming</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- Programming: Python -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">Python</div>
+                <div class="skill-category">Programming</div>
+              </div>
+            </div>
+            <span class="level-badge level-learning">Learning</span>
+          </div>
+
+          <!-- Programming: Java -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">Java</div>
+                <div class="skill-category">Programming</div>
+              </div>
+            </div>
+            <span class="level-badge level-learning">Learning</span>
+          </div>
+
+          <!-- Programming: HTML -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">HTML</div>
+                <div class="skill-category">Markup / Web</div>
+              </div>
+            </div>
+            <span class="level-badge level-intermediate">Intermediate</span>
+          </div>
+
+          <!-- Programming: CSS -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">CSS</div>
+                <div class="skill-category">Styling / Layouts</div>
+              </div>
+            </div>
+            <span class="level-badge level-intermediate">Intermediate</span>
+          </div>
+
+          <!-- Programming: JavaScript -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div>
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-category">Frontend &amp; Logic</div>
+              </div>
+            </div>
+            <span class="level-badge level-intermediate">Intermediate</span>
+          </div>
+
+          <!-- Database: DBMS -->
+          <div class="skill-card" data-category="database">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">DBMS</div>
+                <div class="skill-category">Database Theory</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- Database: SQL -->
+          <div class="skill-card" data-category="database">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">SQL</div>
+                <div class="skill-category">Query Language</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- OS: Windows -->
+          <div class="skill-card" data-category="os">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">Windows</div>
+                <div class="skill-category">Operating System</div>
+              </div>
+            </div>
+            <span class="level-badge level-intermediate">Intermediate</span>
+          </div>
+
+          <!-- OS: Linux -->
+          <div class="skill-card" data-category="os">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">Linux</div>
+                <div class="skill-category">Operating System</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- OS: UNIX basics -->
+          <div class="skill-card" data-category="os">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">UNIX basics</div>
+                <div class="skill-category">Operating System</div>
+              </div>
+            </div>
+            <span class="level-badge level-learning">Learning</span>
+          </div>
+
+          <!-- Other: Git -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">Git</div>
+                <div class="skill-category">Version Control</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- Other: GitHub -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">GitHub</div>
+                <div class="skill-category">Code Collaboration</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- Other: VS Code -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">VS Code</div>
+                <div class="skill-category">Editor &amp; IDE</div>
+              </div>
+            </div>
+            <span class="level-badge level-intermediate">Intermediate</span>
+          </div>
+
+          <!-- Other: Web Development -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">Web Development</div>
+                <div class="skill-category">Engineering</div>
+              </div>
+            </div>
+            <span class="level-badge level-intermediate">Intermediate</span>
+          </div>
+
+          <!-- Other: PDF/document processing -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <div>
+                <div class="skill-name">PDF / Document Processing</div>
+                <div class="skill-category">Utility Tools</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+
+          <!-- Other: Basic cybersecurity concepts -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <div class="skill-name">Basic Cybersecurity Concepts</div>
+                <div class="skill-category">Security</div>
+              </div>
+            </div>
+            <span class="level-badge level-learning">Learning</span>
+          </div>
+
+          <!-- Other: Linux command line -->
+          <div class="skill-card" data-category="other">
+            <div class="skill-card-left">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              </div>
+              <div>
+                <div class="skill-name">Linux Command Line</div>
+                <div class="skill-category">Shell &amp; Bash</div>
+              </div>
+            </div>
+            <span class="level-badge level-working">Working Knowledge</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Currently Learning Section
+         ================================================================= -->
+    <section class="section learning-section" id="learning">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Active Growth</span>
+          </div>
+          <h2 class="section-title">Currently Learning</h2>
+          <p class="section-subtitle">
+            Technology domains and technical skills I am actively studying, practicing, and improving right now.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+          <!-- Python -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Python</h3>
+                <span class="learning-tag">Active Focus</span>
+              </div>
+              <p class="learning-desc">
+                Practicing modular programming, data structures, automation scripts, and algorithmic problem solving.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot" style="background-color:var(--accent-purple); box-shadow:0 0 8px var(--accent-purple);"></span>
+              <span>Strengthening fundamentals &amp; scripting</span>
+            </div>
+          </div>
+
+          <!-- Linux -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Linux</h3>
+                <span class="learning-tag">Core Environment</span>
+              </div>
+              <p class="learning-desc">
+                Deepening familiarity with command-line tools, file system hierarchies, user permissions, and basic system administration.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot" style="background-color:var(--accent-cyan); box-shadow:0 0 8px var(--accent-cyan);"></span>
+              <span>Daily shell workflows &amp; commands</span>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Web Development</h3>
+                <span class="learning-tag">Hands-on Practice</span>
+              </div>
+              <p class="learning-desc">
+                Building responsive, mobile-friendly interfaces with semantic HTML, modern styling layouts, and clean DOM manipulation.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot"></span>
+              <span>Constructing practical web tools</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">JavaScript</h3>
+                <span class="learning-tag">Language Focus</span>
+              </div>
+              <p class="learning-desc">
+                Studying modern ES6+ features, asynchronous event loops, API consumption, and interactive web component logic.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot"></span>
+              <span>Event-driven web applications</span>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Git &amp; GitHub</h3>
+                <span class="learning-tag">Daily Workflow</span>
+              </div>
+              <p class="learning-desc">
+                Reinforcing version control practices, branching, clean commit hygiene, and managing code repositories.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot"></span>
+              <span>Continuous project tracking</span>
+            </div>
+          </div>
+
+          <!-- Cybersecurity -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Cybersecurity</h3>
+                <span class="learning-tag">Key Interest</span>
+              </div>
+              <p class="learning-desc">
+                Studying core principles of CIA triad, network protocols, defensive security hygiene, and security architecture.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot" style="background-color:var(--accent-rose); box-shadow:0 0 8px var(--accent-rose);"></span>
+              <span>Theoretical &amp; applied basics</span>
+            </div>
+          </div>
+
+          <!-- Ethical Hacking Fundamentals -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Ethical Hacking Fundamentals</h3>
+                <span class="learning-tag">Exploration</span>
+              </div>
+              <p class="learning-desc">
+                Exploring fundamental reconnaissance concepts, basic network scanning methodologies, and common web application vulnerabilities.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot" style="background-color:var(--accent-rose); box-shadow:0 0 8px var(--accent-rose);"></span>
+              <span>Safe lab learning &amp; research</span>
+            </div>
+          </div>
+
+          <!-- Database Management -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Database Management</h3>
+                <span class="learning-tag">Academic &amp; Applied</span>
+              </div>
+              <p class="learning-desc">
+                Mastering relational data modeling, entity-relationship diagrams, SQL query writing, normalization, and ACID properties.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot"></span>
+              <span>Coursework &amp; database design</span>
+            </div>
+          </div>
+
+          <!-- Software Development -->
+          <div class="learning-card">
+            <div>
+              <div class="learning-card-top">
+                <h3 class="learning-title">Software Development</h3>
+                <span class="learning-tag">Career Foundation</span>
+              </div>
+              <p class="learning-desc">
+                Learning the end-to-end software development lifecycle, debugging strategies, modular code organization, and testing.
+              </p>
+            </div>
+            <div class="learning-indicator">
+              <span class="pulse-dot"></span>
+              <span>Engineering reliable solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-skills -->
+
+  <!-- =================================================================
+       VIEW 5: FEATURED PROJECTS
+       ================================================================= -->
+  <div class="portfolio-view" id="view-projects">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Featured Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Practical Engineering</span>
+          </div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            Real projects conceived to address tangible needs, from document processing tools to analytics dashboards.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: PDFs Hub -->
+          <div class="project-card" id="card-project-pdfshub">
+            <div class="project-image-box">
+              <img src="assets/images/project-pdfshub.jpg" alt="PDFs Hub Interface">
+              <div class="project-badge-overlay">
+                <span class="project-status-pill status-coming-soon">Coming Soon</span>
+                <span class="project-status-pill status-active-dev">Active Dev</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Web Utility Platform</div>
+              <h3 class="project-title">PDFs Hub</h3>
+              <p class="project-desc">
+                A web-based PDF and document utility platform designed to provide useful tools for working with PDFs, documents and images. The platform is intended to be useful for students, professionals and CSC/shop users.
+              </p>
+              <div class="project-feature-tags">
+                <span class="feature-pill">Merge PDF</span>
+                <span class="feature-pill">PDF Conversion</span>
+                <span class="feature-pill">PDF Compression</span>
+                <span class="feature-pill">Document Conversion</span>
+                <span class="feature-pill">Image Compression</span>
+                <span class="feature-pill">PDF Utilities</span>
+                <span class="feature-pill">Document Utilities</span>
+                <span class="feature-pill">Multiple File Tools</span>
+              </div>
+              <div class="project-footer-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="pdfshub">
+                  <span>View Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+                <span style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
+                  Release: Coming Soon
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: KCF Social Media Analytics Dashboard -->
+          <div class="project-card" id="card-project-kcf">
+            <div class="project-image-box">
+              <img src="assets/images/project-kcf-analytics.jpg" alt="KCF Social Media Analytics Dashboard Interface">
+              <div class="project-badge-overlay">
+                <span class="project-status-pill status-active-dev">Analytics Dashboard</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Data Visualization &amp; Insights</div>
+              <h3 class="project-title">KCF Social Media Analytics Dashboard</h3>
+              <p class="project-desc">
+                A dashboard designed to analyze social media performance data from platforms such as Instagram and Facebook. It focuses on reach, engagement, top-performing posts, posting times, categories and content recommendations.
+              </p>
+              <div class="project-feature-tags">
+                <span class="feature-pill">Instagram / Facebook Toggle</span>
+                <span class="feature-pill">Date-range Analysis</span>
+                <span class="feature-pill">Reach Analysis</span>
+                <span class="feature-pill">Engagement Analysis</span>
+                <span class="feature-pill">Top-performing Posts</span>
+                <span class="feature-pill">Best Posting Time</span>
+                <span class="feature-pill">Best Posting Day</span>
+                <span class="feature-pill">Category Analysis</span>
+                <span class="feature-pill">Platform Comparison</span>
+                <span class="feature-pill">Content Recommendations</span>
+              </div>
+              <div class="project-footer-actions">
+                <button class="btn btn-primary btn-sm" data-project-trigger="kcf-analytics">
+                  <span>View Details</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                </button>
+                <a href="#projects" class="btn btn-outline btn-sm" onclick="showToast('Live preview prototype is in active development.', 'info'); return false;">
+                  <span>Interactive Preview</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Personal Developer Portfolio -->
+          <div class="project-card" id="card-project-portfolio">
+            <div class="project-image-box">
+              <img src="assets/images/rizwan-photo.jpg" alt="Syed Rizwan Bukhari Portfolio Overview">
+              <div class="project-badge-overlay">
+                <span class="project-status-pill status-completed">Live Project</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Frontend &amp; Responsive Design</div>
+              <h3 class="project-title">Personal Developer Portfolio</h3>
+              <p class="project-desc">
+                My personal portfolio website showcasing my education, technical skills, projects, learning journey and contact information. Built with modern vanilla web standards, dynamic interactive components, and dark/light themes.
+              </p>
+              <div class="project-feature-tags">
+                <span class="feature-pill">Semantic HTML5</span>
+                <span class="feature-pill">Vanilla CSS Design System</span>
+                <span class="feature-pill">Interactive Terminal</span>
+                <span class="feature-pill">GitHub API Integration</span>
+                <span class="feature-pill">Printable CV Modal</span>
+                <span class="feature-pill">Validated Contact Form</span>
+              </div>
+              <div class="project-footer-actions">
+                <a href="#home" class="btn btn-primary btn-sm">
+                  <span>View Project (Live)</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-projects -->
+
+  <!-- =================================================================
+       VIEW 6: LEARNING JOURNEY
+       ================================================================= -->
+  <div class="portfolio-view" id="view-journey">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Learning Journey</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journey Section -->
+    <section class="section" id="journey" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Learning Milestones</span>
+          </div>
+          <h2 class="section-title">My Journey</h2>
+          <p class="section-subtitle">
+            Currently building my foundation in computer science and software development through my diploma studies, personal projects and continuous self-learning.
+          </p>
+        </div>
+
+        <div class="journey-timeline">
+          <!-- Step 1 -->
+          <div class="journey-step">
+            <div class="journey-node"></div>
+            <div class="journey-card">
+              <div class="journey-step-number">PHASE 01</div>
+              <h3 class="journey-step-title">Learning Programming Fundamentals</h3>
+              <p class="journey-step-desc">
+                Began coding through foundational procedural programming in C, grasping core logic structures, control flow, loops, memory concepts, and algorithmic thinking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="journey-step">
+            <div class="journey-node"></div>
+            <div class="journey-card">
+              <div class="journey-step-number">PHASE 02</div>
+              <h3 class="journey-step-title">Diploma Studies in Computer Science</h3>
+              <p class="journey-step-desc">
+                Joined Government Polytechnic College Ganderbal for a 3-year Diploma in CSE. Currently in 5th Semester, mastering Operating Systems, Relational DBMS, Computer Architecture, and Networks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="journey-step">
+            <div class="journey-node"></div>
+            <div class="journey-card">
+              <div class="journey-step-number">PHASE 03</div>
+              <h3 class="journey-step-title">Building Web Projects</h3>
+              <p class="journey-step-desc">
+                Learned HTML, CSS, and modern JavaScript to transform ideas into tangible browser software. Built structured responsive layouts, interactive UI components, and accessible interfaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="journey-step">
+            <div class="journey-node"></div>
+            <div class="journey-card">
+              <div class="journey-step-number">PHASE 04</div>
+              <h3 class="journey-step-title">Learning Linux &amp; Command Line</h3>
+              <p class="journey-step-desc">
+                Adopted Linux environments, learning Bash navigation, file permission management, process control, system utilities, and shell scripting to understand how systems operate under the hood.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="journey-step">
+            <div class="journey-node"></div>
+            <div class="journey-card">
+              <div class="journey-step-number">PHASE 05</div>
+              <h3 class="journey-step-title">Exploring Cybersecurity</h3>
+              <p class="journey-step-desc">
+                Began studying cybersecurity principles, network defense protocols, ethical hacking concepts, threat awareness, and safe laboratory experimentation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="journey-step">
+            <div class="journey-node"></div>
+            <div class="journey-card">
+              <div class="journey-step-number">PHASE 06</div>
+              <h3 class="journey-step-title">Working with Git, GitHub &amp; Practical Projects</h3>
+              <p class="journey-step-desc">
+                Adopting version control with Git and GitHub, while conceiving utility platforms like PDFs Hub and the KCF Analytics Dashboard to solve practical user challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-journey -->
+
+  <!-- =================================================================
+       VIEW 7: CAPABILITIES & SERVICES
+       ================================================================= -->
+  <div class="portfolio-view" id="view-services">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Capabilities &amp; Services</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- What I Can Work On (Services / Capabilities) Section -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Areas of Contribution</span>
+          </div>
+          <h2 class="section-title">What I Can Work On</h2>
+          <p class="section-subtitle">
+            Areas I can work on and am developing practical skills in as a motivated student and developing developer.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. Basic Web Development -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="service-title">Basic Web Development</h3>
+            <p class="service-desc">
+              Building clean, mobile-responsive web pages with semantic HTML5, CSS3 styling, and JavaScript logic for clean user interactions.
+            </p>
+          </div>
+
+          <!-- 2. Website Development -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="service-title">Website Development</h3>
+            <p class="service-desc">
+              Structuring multi-section portfolio sites, informational portals, and student project web hubs with organized page architectures.
+            </p>
+          </div>
+
+          <!-- 3. PDF/Document Utility Applications -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="service-title">PDF / Document Utility Applications</h3>
+            <p class="service-desc">
+              Developing tools and scripts for PDF merging, document conversion workflows, image compression, and file utility platforms.
+            </p>
+          </div>
+
+          <!-- 4. Python Programming -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+            </div>
+            <h3 class="service-title">Python Programming</h3>
+            <p class="service-desc">
+              Writing clean Python scripts to process files, automate repetitive data tasks, and implement algorithmic coursework requirements.
+            </p>
+          </div>
+
+          <!-- 5. Basic Database Applications -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <h3 class="service-title">Basic Database Applications</h3>
+            <p class="service-desc">
+              Designing relational database schemas, creating normalized tables, and writing structured SQL queries for basic CRUD operations.
+            </p>
+          </div>
+
+          <!-- 6. Linux-based Tasks -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            </div>
+            <h3 class="service-title">Linux-based Tasks</h3>
+            <p class="service-desc">
+              Assisting with Linux command-line operations, environment configurations, file permissions, shell script execution, and setup.
+            </p>
+          </div>
+
+          <!-- 7. Dashboard Development -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="service-title">Dashboard Development</h3>
+            <p class="service-desc">
+              Creating front-end metric dashboards, data cards, and clean visual layouts to represent statistics and key performance indicators.
+            </p>
+          </div>
+
+          <!-- 8. Basic Automation -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="service-title">Basic Automation</h3>
+            <p class="service-desc">
+              Writing simple automation scripts in Python or Bash to handle batch file processing, folder renaming, and everyday routine tasks.
+            </p>
+          </div>
+
+          <!-- 9. Student / Academic Projects -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h3 class="service-title">Student / Academic Projects</h3>
+            <p class="service-desc">
+              Implementing Computer Science and Engineering lab experiments, data structure problem sets, and academic demonstrations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-services -->
+
+  <!-- =================================================================
+       VIEW 8: CERTIFICATIONS & ACHIEVEMENTS
+       ================================================================= -->
+  <div class="portfolio-view" id="view-certificates">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Certifications &amp; Achievements</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <section class="section" id="certificates" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+            <span>Credentials</span>
+          </div>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">
+            Formal technical certifications and verified course completions.
+          </p>
+        </div>
+
+        <!-- Notification Box -->
+        <div class="cert-notice-box">
+          <div class="cert-notice-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3 class="cert-notice-title">Certificates will be added soon.</h3>
+          <p class="cert-notice-text">
+            I am actively pursuing coursework in Linux, Python, and Cybersecurity fundamentals. As verified certifications are awarded, they will be showcased here with official credential links.
+          </p>
+        </div>
+
+        <!-- Clean Pre-built Structure Ready for New Certificates -->
+        <div class="cert-structure-preview">
+          <div class="cert-placeholder-card">
+            <span class="cert-placeholder-badge">UPCOMING VERIFICATION</span>
+            <h4 class="cert-placeholder-title">Linux Command Line &amp; Systems</h4>
+            <div class="cert-placeholder-org">Structure ready for: Organization &bull; Date &bull; Verification Link</div>
+          </div>
+
+          <div class="cert-placeholder-card">
+            <span class="cert-placeholder-badge">UPCOMING VERIFICATION</span>
+            <h4 class="cert-placeholder-title">Python Programming Foundations</h4>
+            <div class="cert-placeholder-org">Structure ready for: Organization &bull; Date &bull; Verification Link</div>
+          </div>
+
+          <div class="cert-placeholder-card">
+            <span class="cert-placeholder-badge">UPCOMING VERIFICATION</span>
+            <h4 class="cert-placeholder-title">Cybersecurity &amp; Network Defense Basics</h4>
+            <div class="cert-placeholder-org">Structure ready for: Organization &bull; Date &bull; Verification Link</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Achievements Section
+         ================================================================= -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>Milestones &amp; Dedication</span>
+          </div>
+          <h2 class="section-title">Achievements</h2>
+          <p class="section-subtitle">
+            Grounded personal and academic milestones reflecting ongoing growth and commitment to technology.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement 1 -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </div>
+            <h3 class="achievement-title">Diploma Progression</h3>
+            <p class="achievement-desc">
+              Successfully progressing through the Diploma in Computer Science &amp; Engineering at Government Polytechnic College Ganderbal, currently advancing in the 5th Semester.
+            </p>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="achievement-title">Building Practical Projects</h3>
+            <p class="achievement-desc">
+              Conceiving and developing real utility software tools, including PDFs Hub (document processing) and the KCF Social Media Analytics Dashboard.
+            </p>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="achievement-title">Multi-Discipline Skill Growth</h3>
+            <p class="achievement-desc">
+              Developing consistent practical competencies across programming languages (C, Python, Java, JS), Linux administration, and modern web development.
+            </p>
+          </div>
+
+          <!-- Achievement 4 -->
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="achievement-title">Cybersecurity Exploration</h3>
+            <p class="achievement-desc">
+              Proactively exploring cybersecurity principles, network security protocols, and ethical hacking fundamentals with self-driven curiosity and discipline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-certificates -->
+
+  <!-- =================================================================
+       VIEW 9: GITHUB ACTIVITY
+       ================================================================= -->
+  <div class="portfolio-view" id="view-github">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">GitHub Activity</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dedicated GitHub Section -->
+    <section class="section" id="github" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            <span>Open Source &amp; Code</span>
+          </div>
+          <h2 class="section-title">GitHub Activity &amp; Repositories</h2>
+          <p class="section-subtitle">
+            Exploring codebases, practical tools, and sharing open-source learning repositories on GitHub.
+          </p>
+        </div>
+
+        <div class="github-box">
+          <div class="github-header-row">
+            <div class="github-user-info">
+              <div class="github-avatar-small">
+                <img src="assets/images/rizwan-photo.jpg" alt="rizwanbukhari-dev" id="github-avatar-img">
+              </div>
+              <div>
+                <div class="github-username">Syed Rizwan Bukhari</div>
+                <div class="github-handle">@rizwanbukhari-dev</div>
+              </div>
+            </div>
+
+            <div>
+              <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="github-profile-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>View GitHub Profile &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Stats Bar -->
+          <div class="github-stats-bar">
+            <div class="github-stat-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <div>
+                <div class="github-stat-val" id="github-stat-repos">6+</div>
+                <div class="github-stat-lbl">Repositories</div>
+              </div>
+            </div>
+
+            <div class="github-stat-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <div>
+                <div class="github-stat-val" id="github-stat-followers">Active</div>
+                <div class="github-stat-lbl">Community</div>
+              </div>
+            </div>
+
+            <div class="github-stat-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <div>
+                <div class="github-stat-val">Regular</div>
+                <div class="github-stat-lbl">Commits &amp; Learning</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Repositories Grid (Populated via GitHub API / Curated Fallback) -->
+          <div class="github-repos-grid" id="github-repos-grid">
+            <!-- Will be populated dynamically by github.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-github -->
+
+  <!-- =================================================================
+       VIEW 10: CONTACT & CONNECT
+       ================================================================= -->
+  <div class="portfolio-view" id="view-contact">
+    <div class="view-header-bar">
+      <div class="container view-header-content">
+        <a href="#home" class="view-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Home</span>
+        </a>
+        <div class="view-breadcrumb">
+          <a href="#home">Home</a>
+          <span>/</span>
+          <span class="crumb-active">Contact &amp; Connect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Let's Connect (Contact) Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>Get in Touch</span>
+          </div>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">
+            Whether you want to discuss a project, collaborate on learning, or connect professionally, feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Info & Social Accounts -->
+          <div class="contact-info-panel">
+            <div class="contact-cards-group">
+              <!-- WhatsApp Card -->
+              <div class="contact-direct-card">
+                <div class="contact-direct-left">
+                  <div class="contact-direct-icon" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-direct-label">WhatsApp</div>
+                    <div class="contact-direct-value contact-phone-text">+91 6005320065</div>
+                  </div>
+                </div>
+                <a href="https://wa.me/916005320065?text=Hi%20Syed%20Rizwan,%20I%20viewed%20your%20portfolio!" target="_blank" rel="noopener noreferrer" class="contact-action-btn contact-whatsapp-link" style="color: #25D366; border-color: rgba(37, 211, 102, 0.3);">
+                  <span>WhatsApp</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Email Card -->
+              <div class="contact-direct-card">
+                <div class="contact-direct-left">
+                  <div class="contact-direct-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="contact-direct-label">Email</div>
+                    <div class="contact-direct-value contact-email-text">syedrizwanbukhari18@gmail.com</div>
+                  </div>
+                </div>
+                <a href="mailto:syedrizwanbukhari18@gmail.com" class="contact-action-btn contact-email-link">
+                  <span>Email</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-direct-card">
+                <div class="contact-direct-left">
+                  <div class="contact-direct-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <div class="contact-direct-label">Location</div>
+                    <div class="contact-direct-value">Budgam, Jammu &amp; Kashmir, India</div>
+                  </div>
+                </div>
+                <span class="contact-action-btn" style="cursor: default; opacity: 0.8;">J&amp;K, IN</span>
+              </div>
+            </div>
+
+            <!-- Connect With Me Dedicated Social Accounts -->
+            <div class="social-channels-box">
+              <h3 class="social-channels-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <span>Connect With Me</span>
+              </h3>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:18px;">
+                Direct profiles on verified networks &bull; feel free to say hello!
+              </p>
+
+              <div class="social-channels-grid">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/rizwan-bukhari-dev" target="_blank" rel="noopener noreferrer" class="channel-btn channel-linkedin">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span class="channel-name">LinkedIn</span>
+                  <span style="font-size:0.7rem; opacity:0.8;">Rizwan Bukhari-dev</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="channel-btn channel-github">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span class="channel-name">GitHub</span>
+                  <span style="font-size:0.7rem; opacity:0.8;">rizwanbukhari-dev</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/rizwanbukhari.dev/" target="_blank" rel="noopener noreferrer" class="channel-btn channel-instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <span class="channel-name">Instagram</span>
+                  <span style="font-size:0.7rem; opacity:0.8;">rizwanbukhari.dev</span>
+                </a>
+              </div>
+
+              <!-- Quick Local Configuration Button for Phone & Email -->
+              <div style="margin-top: 18px; text-align: center;">
+                <button class="btn btn-outline btn-sm" id="open-config-modal-btn" data-modal-target="modal-contact-config" style="width: 100%;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                  <span>Customize My Phone &amp; Email In 1-Click</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Validated Contact Form -->
+          <div class="contact-form-card">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">Fill in the form below and I will respond to your inquiry promptly.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name *</label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Johnson" required>
+                  <div class="form-error">Please enter your name (min 2 characters).</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email *</label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="name@example.com" required>
+                  <div class="form-error">Please enter a valid email address.</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject *</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Project Inquiry / Opportunity" required>
+                <div class="form-error">Please enter a subject (min 3 characters).</div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message *</label>
+                <textarea id="contact-message" class="form-control" placeholder="Hello Syed Rizwan, I would like to connect with you regarding..." required></textarea>
+                <div class="form-error">Please enter a message (min 10 characters).</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+
+            <div id="email-redirect-notice" style="display:none; margin-top:16px; padding:12px; background:rgba(6, 182, 212, 0.1); border:1px solid rgba(6, 182, 212, 0.3); border-radius:var(--radius-md); font-size:0.86rem;">
+              <span>Message prepared! You can also </span>
+              <a href="#" id="email-client-link" class="gradient-text" style="font-weight:700;">click here to launch your native email app</a>
+              <span> to send directly.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> <!-- /view-contact -->
+</main>
+
+  <!-- =================================================================
+       Footer
+       ================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="nav-brand">
+            <div class="nav-brand-avatar">
+              <img src="assets/images/rizwan-photo.jpg" alt="Syed Rizwan Bukhari">
+              <span class="nav-brand-dot"></span>
+            </div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">Syed Rizwan <span class="nav-brand-accent">Bukhari</span></span>
+              <span class="nav-brand-role">CS&amp;E &bull; Budgam, J&amp;K</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Computer Science &amp; Engineering student aspiring to build robust software tools and explore cybersecurity frontiers.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#education" class="footer-link">Education Timeline</a></li>
+            <li><a href="#skills" class="footer-link">Technical Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Connect With Me</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://www.linkedin.com/in/rizwan-bukhari-dev" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn: Rizwan Bukhari-dev</a></li>
+            <li><a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub: rizwanbukhari-dev</a></li>
+            <li><a href="https://www.instagram.com/rizwanbukhari.dev/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram: rizwanbukhari.dev</a></li>
+            <li><a href="#contact" class="footer-link">Direct Contact Form</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Syed Rizwan Bukhari. All rights reserved.
+        </div>
+        <div>
+          Designed &amp; built with modern web technologies.
+        </div>
+        <button class="back-to-top-btn" id="back-to-top" aria-label="Scroll back to top" title="Back to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       Modals Container
+       ================================================================= -->
+
+  <!-- Modal 1: Project Details Modal -->
+  <div class="modal-backdrop" id="modal-project-details" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <div id="project-modal-cat" style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-cyan); font-weight:700;">Project Details</div>
+          <h3 class="modal-title" id="project-modal-title">PDFs Hub</h3>
+        </div>
+        <button class="modal-close-btn" data-modal-close aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="border-radius:var(--radius-md); overflow:hidden; margin-bottom:20px; max-height:360px; background:var(--bg-tertiary);">
+          <img src="assets/images/project-pdfshub.jpg" alt="Project Preview" id="project-modal-img" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <span class="project-status-pill status-coming-soon" id="project-modal-status">Coming Soon</span>
+        </div>
+        <p id="project-modal-desc" style="color:var(--text-secondary); line-height:1.7; margin-bottom:20px;">
+          Detailed information about this project.
+        </p>
+        <h4 style="font-size:1.1rem; margin-bottom:12px;">Core Capabilities &amp; Features:</h4>
+        <ul id="project-modal-features" style="color:var(--text-muted); line-height:1.7; padding-left:10px;">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+          <span>GitHub Profile</span>
+        </a>
+        <button class="btn btn-primary btn-sm" data-modal-close>
+          <span>Close Details</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Printable & Viewable CV / Resume -->
+  <div class="modal-backdrop" id="modal-cv" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 850px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Curriculum Vitae &bull; Syed Rizwan Bukhari</h3>
+        <button class="modal-close-btn" data-modal-close aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Clean Printable Resume Sheet -->
+        <div class="resume-paper" id="resume-printable-area">
+          <div class="resume-header">
+            <h1 class="resume-name">Syed Rizwan Bukhari</h1>
+            <div class="resume-tagline">Computer Science &amp; Engineering Student &bull; Aspiring Software &amp; Cybersecurity Professional</div>
+            <div class="resume-meta-row">
+              <span>📍 Budgam, Jammu &amp; Kashmir, India</span>
+              <span>💬 WhatsApp: <span class="contact-phone-text">+91 6005320065</span></span>
+              <span>✉️ <span class="contact-email-text">syedrizwanbukhari18@gmail.com</span></span>
+              <span>🐙 github.com/rizwanbukhari-dev</span>
+              <span>💼 linkedin.com/in/rizwan-bukhari-dev</span>
+            </div>
+          </div>
+
+          <h2 class="resume-section-title">Professional Summary</h2>
+          <p style="color:#334155; margin-bottom:14px;">
+            Computer Science &amp; Engineering diploma student from Budgam, Jammu &amp; Kashmir, passionate about programming, Linux environments, web development, and cybersecurity. Motivated to build practical, real-world utility software while maintaining continuous self-learning towards a career as a skilled software and cybersecurity professional.
+          </p>
+
+          <h2 class="resume-section-title">Education</h2>
+          <div style="margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; font-weight:700; color:#0f172a;">
+              <span>Diploma in Computer Science &amp; Engineering</span>
+              <span>Currently in 5th Semester</span>
+            </div>
+            <div style="color:#0284c7; font-weight:600;">Government Polytechnic College Ganderbal</div>
+            <div style="font-size:0.85rem; color:#64748b;">Key Subjects: DBMS, Operating Systems, Computer Networks, C/Java/Python Programming, Web Technologies.</div>
+          </div>
+
+          <div style="margin-bottom:12px;">
+            <div style="display:flex; justify-content:space-between; font-weight:700; color:#0f172a;">
+              <span>Class 10th (Secondary Schooling)</span>
+              <span>Completed</span>
+            </div>
+            <div style="color:#0284c7; font-weight:600;">HS Chewdara</div>
+            <div style="font-size:0.85rem; color:#64748b;">Strong foundational education in Mathematics and Sciences.</div>
+          </div>
+
+          <h2 class="resume-section-title">Technical Skills</h2>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:0.9rem; color:#334155;">
+            <div><strong>Programming:</strong> C, Python, Java, HTML, CSS, JavaScript</div>
+            <div><strong>Databases:</strong> DBMS concepts, SQL</div>
+            <div><strong>Operating Systems:</strong> Linux, Windows, UNIX basics</div>
+            <div><strong>Tools &amp; Practices:</strong> Git, GitHub, VS Code, Linux CLI, Document Utilities</div>
+          </div>
+
+          <h2 class="resume-section-title">Featured Projects</h2>
+          <div style="margin-bottom:10px;">
+            <div style="font-weight:700; color:#0f172a;">PDFs Hub &mdash; Document Utility Platform (Coming Soon)</div>
+            <div style="font-size:0.88rem; color:#475569;">Web-based document manipulation platform designed for students and CSC operators, providing PDF merging, compression, and format conversions.</div>
+          </div>
+          <div style="margin-bottom:10px;">
+            <div style="font-weight:700; color:#0f172a;">KCF Social Media Analytics Dashboard</div>
+            <div style="font-size:0.88rem; color:#475569;">Performance dashboard evaluating reach, engagement, top posts, and best posting times for Instagram and Facebook.</div>
+          </div>
+
+          <h2 class="resume-section-title">Interests &amp; Aspirations</h2>
+          <p style="font-size:0.88rem; color:#475569;">
+            Cybersecurity &amp; Ethical Hacking Fundamentals, Linux System Administration, Software Engineering, Continuous Higher Education.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="cv-print-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+        <button class="btn btn-primary btn-sm" data-modal-close>
+          <span>Close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Quick Contact Details Configurator -->
+  <div class="modal-backdrop" id="modal-contact-config" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Customize Contact Details</h3>
+        <button class="modal-close-btn" data-modal-close aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:18px;">
+          Enter your real phone number and email below. It will update all Call, WhatsApp, Email, and CV buttons across your portfolio instantly!
+        </p>
+
+        <div class="form-group">
+          <label class="form-label" for="config-phone-input">Your Phone Number</label>
+          <input type="text" id="config-phone-input" class="form-control" placeholder="+91 6005320065">
+          <small style="color:var(--text-subtle); display:block; margin-top:4px;">Includes country code (+91) for direct call &amp; WhatsApp</small>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="config-email-input">Your Professional Email</label>
+          <input type="email" id="config-email-input" class="form-control" placeholder="syedrizwanbukhari18@gmail.com">
+          <small style="color:var(--text-subtle); display:block; margin-top:4px;">Used for direct mailto links and contact inquiries</small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" data-modal-close>Cancel</button>
+        <button class="btn btn-primary btn-sm" id="save-contact-info-btn">
+          <span>Save Changes</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Update copyright year
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
