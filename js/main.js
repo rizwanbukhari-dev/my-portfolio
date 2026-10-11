@@ -62,14 +62,15 @@ function updateThemeIcon(theme) {
 }
 
 /* -------------------------------------------------------------------
-   2. Navigation, Sticky Header & Mobile Drawer
+   2. Navigation, Sticky Header & Hamburger Drawer Menu
    ------------------------------------------------------------------- */
 function initNavigation() {
   const navbar = document.getElementById("navbar");
-  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-  const mobileNavMenu = document.getElementById("mobile-nav-menu");
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const drawerCloseBtn = document.getElementById("drawer-close-btn");
+  const navDrawer = document.getElementById("nav-drawer");
   const navBackdrop = document.getElementById("nav-backdrop");
-  const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
+  const drawerLinks = document.querySelectorAll(".drawer-nav-link");
 
   // Sticky header shadow on scroll
   window.addEventListener("scroll", () => {
@@ -81,59 +82,75 @@ function initNavigation() {
     }
   }, { passive: true });
 
-  // Mobile menu open / close
-  function openMobileMenu() {
-    if (!mobileNavMenu || !mobileMenuBtn) return;
-    mobileMenuBtn.classList.add("is-active");
-    mobileMenuBtn.setAttribute("aria-expanded", "true");
-    mobileNavMenu.classList.add("is-open");
+  // Drawer open / close handlers
+  function openDrawer() {
+    if (!navDrawer || !hamburgerBtn) return;
+    hamburgerBtn.classList.add("is-active");
+    hamburgerBtn.setAttribute("aria-expanded", "true");
+    navDrawer.classList.add("is-open");
+    navDrawer.setAttribute("aria-hidden", "false");
     if (navBackdrop) navBackdrop.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
 
-  function closeMobileMenu() {
-    if (!mobileNavMenu || !mobileMenuBtn) return;
-    mobileMenuBtn.classList.remove("is-active");
-    mobileMenuBtn.setAttribute("aria-expanded", "false");
-    mobileNavMenu.classList.remove("is-open");
+  function closeDrawer() {
+    if (!navDrawer || !hamburgerBtn) return;
+    hamburgerBtn.classList.remove("is-active");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
+    navDrawer.classList.remove("is-open");
+    navDrawer.setAttribute("aria-hidden", "true");
     if (navBackdrop) navBackdrop.classList.remove("is-open");
     document.body.style.overflow = "";
   }
 
-  if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener("click", () => {
-      const isOpen = mobileNavMenu && mobileNavMenu.classList.contains("is-open");
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = navDrawer && navDrawer.classList.contains("is-open");
       if (isOpen) {
-        closeMobileMenu();
+        closeDrawer();
       } else {
-        openMobileMenu();
+        openDrawer();
       }
     });
   }
 
-  if (navBackdrop) {
-    navBackdrop.addEventListener("click", closeMobileMenu);
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener("click", closeDrawer);
   }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener("click", closeDrawer);
+  }
+
+  // Close when clicking outside drawer
+  document.addEventListener("click", (e) => {
+    if (navDrawer && navDrawer.classList.contains("is-open")) {
+      if (!navDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        closeDrawer();
+      }
+    }
+  });
 
   // Close on Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      closeMobileMenu();
+      closeDrawer();
       closeModal("modal-resume");
     }
   });
 
-  // Smooth scroll and auto-close mobile menu on link click
-  navLinks.forEach(link => {
+  // Smooth scroll and auto-close drawer on link click
+  drawerLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       const targetHref = link.getAttribute("href");
       if (targetHref && targetHref.startsWith("#")) {
         const targetEl = document.querySelector(targetHref);
         if (targetEl) {
           e.preventDefault();
-          closeMobileMenu();
+          closeDrawer();
           
-          const navHeight = navbar ? navbar.offsetHeight : 70;
+          const navHeight = navbar ? navbar.offsetHeight : 72;
           const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
           
           window.scrollTo({
@@ -154,7 +171,7 @@ function initNavigation() {
    ------------------------------------------------------------------- */
 function initScrollSpy() {
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".drawer-nav-link, .nav-link");
 
   if (!sections.length || !navLinks.length) return;
 

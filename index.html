@@ -45,19 +45,7 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Nav Actions: Theme Switcher & Mobile Menu Trigger -->
+      <!-- Nav Actions: Theme Switcher & Professional Hamburger Button -->
       <div class="nav-actions">
         <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch to light theme" title="Toggle Theme">
           <!-- Sun Icon (shown in dark theme) -->
@@ -78,26 +66,123 @@
           </svg>
         </button>
 
-        <!-- Mobile Hamburger Button -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" title="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <!-- Professional Hamburger Menu Button (Desktop & Mobile) -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-drawer" title="Menu">
+          <span class="hamburger-box" aria-hidden="true">
+            <span class="hamburger-line line-top"></span>
+            <span class="hamburger-line line-mid"></span>
+            <span class="hamburger-line line-bot"></span>
+          </span>
+          <span class="hamburger-label">Menu</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
+  <!-- Slide-out Navigation Drawer Backdrop -->
   <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
-  <nav class="mobile-nav-menu" id="mobile-nav-menu" aria-label="Mobile Navigation">
-    <a href="#home" class="mobile-nav-link"><span>01. Home</span> &rarr;</a>
-    <a href="#about" class="mobile-nav-link"><span>02. About Me</span> &rarr;</a>
-    <a href="#skills" class="mobile-nav-link"><span>03. Technical Skills</span> &rarr;</a>
-    <a href="#projects" class="mobile-nav-link"><span>04. Featured Projects</span> &rarr;</a>
-    <a href="#education" class="mobile-nav-link"><span>05. Education</span> &rarr;</a>
-    <a href="#contact" class="mobile-nav-link"><span>06. Contact</span> &rarr;</a>
-  </nav>
+
+  <!-- Stylish Slide-out Navigation Drawer Panel (Desktop & Mobile) -->
+  <aside class="nav-drawer" id="nav-drawer" aria-label="Site Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <div class="drawer-avatar">
+          <img src="assets/images/rizwan-photo.jpg" alt="Syed Rizwan Bukhari" width="38" height="38" loading="lazy">
+        </div>
+        <div class="drawer-brand-text">
+          <span class="drawer-name">Syed Rizwan Bukhari</span>
+          <span class="drawer-role">Computer Engineering Student</span>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu" title="Close Menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="drawer-section-label">Navigation</div>
+      <nav class="drawer-nav" aria-label="Drawer Links">
+        <ul class="drawer-links-list">
+          <li>
+            <a href="#home" class="drawer-nav-link active">
+              <span class="drawer-link-number">01</span>
+              <span class="drawer-link-text">Home</span>
+              <span class="drawer-link-arrow">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="drawer-nav-link">
+              <span class="drawer-link-number">02</span>
+              <span class="drawer-link-text">About Me</span>
+              <span class="drawer-link-arrow">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="drawer-nav-link">
+              <span class="drawer-link-number">03</span>
+              <span class="drawer-link-text">Technical Skills</span>
+              <span class="drawer-link-arrow">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="drawer-nav-link">
+              <span class="drawer-link-number">04</span>
+              <span class="drawer-link-text">Featured Projects</span>
+              <span class="drawer-link-arrow">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#education" class="drawer-nav-link">
+              <span class="drawer-link-number">05</span>
+              <span class="drawer-link-text">Education</span>
+              <span class="drawer-link-arrow">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="drawer-nav-link">
+              <span class="drawer-link-number">06</span>
+              <span class="drawer-link-text">Contact &amp; Connect</span>
+              <span class="drawer-link-arrow">&rarr;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-section-label">Quick Connect</div>
+      <a href="mailto:syedrizwanbukhari18@gmail.com" class="drawer-email-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span>syedrizwanbukhari18@gmail.com</span>
+      </a>
+
+      <div class="drawer-actions-row">
+        <button class="btn btn-outline btn-sm" data-open-resume style="width: 100%;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          <span>View Curriculum Vitae</span>
+        </button>
+      </div>
+
+      <div class="drawer-socials-row">
+        <a href="https://github.com/rizwanbukhari-dev" target="_blank" rel="noopener noreferrer" class="drawer-social-link">GitHub</a>
+        <span>&bull;</span>
+        <a href="https://www.instagram.com/rizwanbukhari.dev/" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Instagram</a>
+        <span>&bull;</span>
+        <a href="https://rizwanbukhari-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="drawer-social-link">Live Site</a>
+      </div>
+    </div>
+  </aside>
 
   <main>
     <!-- =================================================================

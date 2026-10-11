@@ -10,7 +10,7 @@ A modern, responsive, industry-quality developer portfolio for **Syed Rizwan Buk
 - **Authentic Presentation**: Accurately showcases Syed Rizwan Bukhari as a student developer building practical projects with honest skill categorization (no arbitrary proficiency percentages or exaggerated claims).
 - **Zero Heavy Frameworks**: Pure semantic HTML5, modern vanilla CSS3, and JavaScript — lightning fast load times, zero build tooling required.
 - **Genuine Image Integration**: High-resolution formal portrait and actual project preview assets.
-- **Smooth Single-Page Flow**: Clear logical hierarchy with sticky navigation, scroll spy, smooth scrolling, and mobile drawer menu.
+- **Smooth Single-Page Flow & Universal Hamburger Navigation**: Minimalist header with a professional hamburger menu (☰) on desktop and mobile, opening an elegant off-canvas navigation panel with smooth transitions, scroll spy, and keyboard accessibility.
 - **Featured Projects**:
   - **PDFKit**: Web-based PDF utility application deployed on Vercel ([Live Demo](https://pdfkit-1.vercel.app/) | [GitHub](https://github.com/rizwanbukhari-dev/pdfkit.1)).
   - **Personal Developer Portfolio**: Responsive portfolio codebase ([Live Demo](https://rizwanbukhari-1.vercel.app/) | [GitHub](https://github.com/rizwanbukhari-dev/my-portfolio)).
