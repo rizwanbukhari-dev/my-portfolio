@@ -1,59 +1,48 @@
 /**
- * GitHub API Integration & Fallback Handler
- * Syed Rizwan Bukhari - Profile & Repositories Showcase
+ * GitHub API Integration & Fallback Showcase
+ * Syed Rizwan Bukhari (@rizwanbukhari-dev)
+ * Fetches public repositories from GitHub REST API with curated fallbacks.
  */
 
 const GITHUB_USERNAME = "rizwanbukhari-dev";
 
-// Default showcase repositories in case GitHub API is rate-limited or offline
+// Curated authentic repositories shown if GitHub API is rate-limited or offline
 const FALLBACK_REPOSITORIES = [
   {
-    name: "PDFs-Hub",
-    description: "A web-based PDF and document utility platform providing merging, conversion, compression, and document processing tools.",
+    name: "pdfkit.1",
+    description: "A lightweight, web-based PDF and document utility application for merging, splitting, and converting documents. Deployed on Vercel.",
     language: "JavaScript",
     stars: 0,
     forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`
+    url: `https://github.com/${GITHUB_USERNAME}/pdfkit.1`,
+    liveDemo: "https://pdfkit-1.vercel.app/"
   },
   {
-    name: "KCF-Social-Analytics",
-    description: "Analytics dashboard designed to evaluate Instagram and Facebook reach, engagement metrics, and posting time recommendations.",
-    language: "JavaScript",
+    name: "my-portfolio",
+    description: "Modern, responsive personal developer portfolio engineered with HTML5, vanilla CSS3, and JavaScript.",
+    language: "HTML",
     stars: 0,
     forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`
+    url: `https://github.com/${GITHUB_USERNAME}/my-portfolio`,
+    liveDemo: "https://rizwanbukhari-1.vercel.app/"
   },
   {
-    name: "rizwan-bukhari-portfolio",
-    description: "Modern, responsive personal developer portfolio showcasing technical education, skills, projects, and learning journey.",
-    language: "HTML / CSS / JS",
-    stars: 0,
-    forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`
-  },
-  {
-    name: "python-practical-scripts",
-    description: "Modular Python scripts covering algorithmic logic, file automation, and academic engineering laboratory implementations.",
+    name: "python-practical-work",
+    description: "Python scripts exploring programming logic, laboratory problem sets, automation routines, and data structures.",
     language: "Python",
     stars: 0,
     forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`
+    url: `https://github.com/${GITHUB_USERNAME}`,
+    liveDemo: ""
   },
   {
-    name: "linux-command-line-notes",
-    description: "Comprehensive notes, bash commands, system administration basics, and shell scripting reference for CSE students.",
+    name: "linux-cli-notes",
+    description: "Practical documentation, bash command references, file system permissions, and shell scripting guides for engineering students.",
     language: "Shell",
     stars: 0,
     forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`
-  },
-  {
-    name: "cybersecurity-basics-lab",
-    description: "Documentation and study materials exploring network security protocols, vulnerability concepts, and ethical hacking essentials.",
-    language: "Markdown",
-    stars: 0,
-    forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`
+    url: `https://github.com/${GITHUB_USERNAME}`,
+    liveDemo: ""
   }
 ];
 
@@ -61,12 +50,13 @@ async function loadGitHubData() {
   const reposContainer = document.getElementById("github-repos-grid");
   const statsRepos = document.getElementById("github-stat-repos");
   const statsFollowers = document.getElementById("github-stat-followers");
-  const githubUserAvatar = document.getElementById("github-avatar-img");
-  const githubProfileLink = document.getElementById("github-profile-link");
+  const profileLink = document.getElementById("github-profile-link");
 
-  if (githubProfileLink) {
-    githubProfileLink.href = `https://github.com/${GITHUB_USERNAME}`;
+  if (profileLink) {
+    profileLink.href = `https://github.com/${GITHUB_USERNAME}`;
   }
+
+  if (!reposContainer) return;
 
   try {
     // 1. Fetch User Profile
@@ -76,15 +66,15 @@ async function loadGitHubData() {
 
     if (userRes.ok) {
       const userData = await userRes.json();
-      if (statsRepos) statsRepos.textContent = userData.public_repos || "6+";
-      if (statsFollowers) statsFollowers.textContent = userData.followers || "0";
-      if (githubUserAvatar && userData.avatar_url) {
-        githubUserAvatar.src = userData.avatar_url;
+      if (statsRepos && userData.public_repos !== undefined) {
+        statsRepos.textContent = userData.public_repos;
+      }
+      if (statsFollowers && userData.followers !== undefined) {
+        statsFollowers.textContent = userData.followers;
       }
     } else {
-      // Graceful default values
-      if (statsRepos) statsRepos.textContent = "6+";
-      if (statsFollowers) statsFollowers.textContent = "Active";
+      if (statsRepos) statsRepos.textContent = "Active";
+      if (statsFollowers) statsFollowers.textContent = "Student";
     }
 
     // 2. Fetch User Repositories
@@ -94,16 +84,17 @@ async function loadGitHubData() {
 
     if (reposRes.ok) {
       const repos = await reposRes.json();
-      if (repos && repos.length > 0) {
+      if (Array.isArray(repos) && repos.length > 0) {
         renderRepositories(repos, reposContainer, true);
         return;
       }
     }
   } catch (err) {
-    console.warn("GitHub API fetch notice (using curated repository showcase):", err);
+    // Gracefully handle rate limit / network issue
+    console.info("Using curated GitHub repository showcase (network notice):", err.message || err);
   }
 
-  // Fallback if API rate limited or empty
+  // Fallback to authentic curated repositories
   renderRepositories(FALLBACK_REPOSITORIES, reposContainer, false);
 }
 
@@ -111,39 +102,58 @@ function renderRepositories(repos, container, isApiData) {
   if (!container) return;
 
   container.innerHTML = "";
-  
-  repos.slice(0, 6).forEach(repo => {
-    const name = isApiData ? repo.name : repo.name;
-    const desc = isApiData ? (repo.description || "Project repository by Syed Rizwan Bukhari.") : repo.description;
-    const lang = isApiData ? (repo.language || "Code") : repo.language;
-    const url = isApiData ? repo.html_url : repo.url;
-    const stars = isApiData ? repo.stargazers_count : (repo.stars || 0);
 
-    const card = document.createElement("div");
-    card.className = "repo-card";
+  repos.slice(0, 4).forEach(repo => {
+    const name = repo.name;
+    const desc = repo.description || "Public repository by Syed Rizwan Bukhari.";
+    const lang = repo.language || "Code";
+    const url = isApiData ? repo.html_url : repo.url;
+    const stars = isApiData ? (repo.stargazers_count || 0) : (repo.stars || 0);
+
+    const card = document.createElement("article");
+    card.className = "github-repo-card";
     card.innerHTML = `
-      <div>
-        <div class="repo-title-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="repo-card-header">
+        <div class="repo-name-wrap">
+          <svg class="repo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
           </svg>
-          <a href="${url}" target="_blank" rel="noopener noreferrer" class="repo-name">${name}</a>
+          <a href="${url}" target="_blank" rel="noopener noreferrer" class="repo-title-link" aria-label="Repository ${name}">
+            ${name}
+          </a>
         </div>
-        <p class="repo-desc">${desc}</p>
+        <span class="repo-badge">Public</span>
       </div>
-      <div class="repo-footer">
-        <span class="repo-lang">
-          <span class="lang-dot"></span>
-          ${lang}
-        </span>
-        <a href="${url}" target="_blank" rel="noopener noreferrer" class="contact-action-btn" style="padding: 3px 8px; font-size: 0.75rem;">
-          View Repo &rarr;
+      <p class="repo-description">${escapeHtml(desc)}</p>
+      <div class="repo-meta-row">
+        <div class="repo-lang-indicator">
+          <span class="lang-color-dot lang-${lang.toLowerCase().replace(/[^a-z]/g, '')}"></span>
+          <span class="repo-lang-name">${lang}</span>
+        </div>
+        ${stars > 0 ? `
+          <div class="repo-stars">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>${stars}</span>
+          </div>
+        ` : ''}
+        <a href="${url}" target="_blank" rel="noopener noreferrer" class="repo-view-link" aria-label="View code for ${name} on GitHub">
+          View Code &rarr;
         </a>
       </div>
     `;
     container.appendChild(card);
   });
+}
+
+function escapeHtml(str) {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

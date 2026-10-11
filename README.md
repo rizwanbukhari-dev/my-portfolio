@@ -1,19 +1,21 @@
 # Syed Rizwan Bukhari — Personal Developer Portfolio
 
-A modern, responsive, high-performance personal portfolio website for **Syed Rizwan Bukhari**, Computer Science & Engineering student at Government Polytechnic College Ganderbal (5th Semester).
+A modern, responsive, industry-quality developer portfolio for **Syed Rizwan Bukhari**, Computer Engineering student at Government Polytechnic College Ganderbal (5th Semester).
 
 ---
 
-## 🌟 Overview & Highlights
+## 🌟 Overview & Design Direction
 
-- **Aesthetic**: Sleek Dark/Light theme, glassmorphism surfaces, neon cyan and violet accents, modern typography (`Outfit`, `Plus Jakarta Sans`, and `JetBrains Mono`).
-- **Real Portrait Integration**: Uses Syed Rizwan Bukhari's uploaded photograph in the hero visual card and printable CV.
-- **Interactive Developer Terminal**: Embedded interactive Bash terminal (`rizwan@budgam:~$`) with quick command triggers (`whoami`, `skills`, `education`, `interests`, `contact`, `clear`).
-- **Zero Heavy Frameworks**: Pure vanilla HTML5, CSS3, and JavaScript — lightning fast load times, zero build steps needed.
-- **Responsive**: Fully responsive across mobile smartphones, tablets, laptops, and ultra-wide desktop screens with animated hamburger menu.
-- **GitHub API Integration**: Real-time integration fetching public repositories from [@rizwanbukhari-dev](https://github.com/rizwanbukhari-dev) with curated fallback support.
-- **Printable / Downloadable CV**: Built-in modal with clean paper resume styling and 1-click **Print / Save as PDF**.
-- **1-Click Contact Details Customizer**: Update your real phone number and email address directly from the browser, saving instantly to `localStorage`.
+- **Minimalist Engineering Aesthetic**: Clean, developer-focused interface designed with a deep navy / charcoal dark mode, crisp light mode toggle, and restrained indigo accents.
+- **Authentic Presentation**: Accurately showcases Syed Rizwan Bukhari as a student developer building practical projects with honest skill categorization (no arbitrary proficiency percentages or exaggerated claims).
+- **Zero Heavy Frameworks**: Pure semantic HTML5, modern vanilla CSS3, and JavaScript — lightning fast load times, zero build tooling required.
+- **Genuine Image Integration**: High-resolution formal portrait and actual project preview assets.
+- **Smooth Single-Page Flow**: Clear logical hierarchy with sticky navigation, scroll spy, smooth scrolling, and mobile drawer menu.
+- **Featured Projects**:
+  - **PDFKit**: Web-based PDF utility application deployed on Vercel ([Live Demo](https://pdfkit-1.vercel.app/) | [GitHub](https://github.com/rizwanbukhari-dev/pdfkit.1)).
+  - **Personal Developer Portfolio**: Responsive portfolio codebase ([Live Demo](https://rizwanbukhari-1.vercel.app/) | [GitHub](https://github.com/rizwanbukhari-dev/my-portfolio)).
+- **Live GitHub Activity**: Real-time integration with the GitHub REST API fetching public repositories from [@rizwanbukhari-dev](https://github.com/rizwanbukhari-dev) with graceful fallback cards.
+- **Printable Curriculum Vitae**: Clean modal resume formatted for 1-click browser printing or PDF saving.
 
 ---
 
@@ -21,72 +23,78 @@ A modern, responsive, high-performance personal portfolio website for **Syed Riz
 
 ```
 d:\rizwan-bukhari-protfolio\
-├── index.html                  # Main portfolio webpage
+├── index.html                  # Main portfolio webpage (semantic sections A-I)
 ├── css\
-│   └── style.css               # Design system, themes, animations, media queries & print CSS
+│   └── style.css               # Design system, dark/light themes, typography, print styles
 ├── js\
-│   ├── config.js               # Central configuration with personal info & social links
-│   ├── github.js               # GitHub API integration & fallback repository cards
-│   └── main.js                 # App logic, theme toggle, terminal emulator, form validator & modals
+│   ├── config.js               # Central configuration with verified personal & project details
+│   ├── github.js               # GitHub REST API integration & fallback repository cards
+│   └── main.js                 # Theme toggler, navigation, scroll spy, contact validation, CV modal
 ├── assets\
 │   └── images\
-│       ├── rizwan-photo.jpg    # Genuine uploaded portrait of Syed Rizwan Bukhari
-│       ├── project-pdfshub.jpg # UI preview for PDFs Hub project
-│       └── project-kcf-analytics.jpg # UI preview for KCF Social Media Analytics Dashboard
-└── README.md                   # Documentation
+│       ├── rizwan-photo.jpg    # Verified photograph of Syed Rizwan Bukhari
+│       ├── avatar.jpg          # Avatar image
+│       └── project-pdfshub.jpg # PDFKit project preview interface
+└── README.md                   # Documentation & deployment guide
 ```
 
 ---
 
 ## 🚀 How to Run Locally
 
-You can preview the website locally using any lightweight local server:
+You can run the portfolio locally using any standard static server:
 
-### Option 1: Python
+### Option 1: Python (Built-in)
 ```bash
-# In the project directory:
 python -m http.server 3000
 ```
-Then visit: `http://localhost:3000`
+Then open: [http://localhost:3000](http://localhost:3000)
 
-### Option 2: Node.js (npx serve)
+### Option 2: Node.js (`npx serve`)
 ```bash
 npx -y serve . -p 3000
 ```
+Then open: [http://localhost:3000](http://localhost:3000)
 
-### Option 3: Double-click
-Simply open `index.html` in any modern web browser (Google Chrome, Edge, Firefox, Brave, Safari).
-
----
-
-## ⚙️ Customizing Your Information
-
-### 1. In `js/config.js`
-Open `js/config.js` to change:
-- `contact.phonePlaceholder` & `contact.phoneRaw`
-- `contact.emailPlaceholder` & `contact.emailRaw`
-- Social media URLs
-
-### 2. Directly in the Browser
-Click **"Customize My Phone & Email In 1-Click"** in the **Let's Connect** section on the website to enter your phone number and email. All buttons (Call, WhatsApp, Email, CV) will update automatically.
+### Option 3: Direct Browser File
+Double-click `index.html` in Windows Explorer to open it in Chrome, Edge, Firefox, Brave, or Safari.
 
 ---
 
-## 🌐 Deploying to GitHub Pages (Free)
+## ⚙️ Details You Can Customize Manually
 
-1. Create a repository named `portfolio` (or `rizwanbukhari-dev.github.io`) on GitHub under your account `rizwanbukhari-dev`.
-2. Push this folder to your repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio release"
-   git branch -M main
-   git remote add origin https://github.com/rizwanbukhari-dev/portfolio.git
-   git push -u origin main
-   ```
-3. Go to **Settings > Pages** on GitHub and select `Branch: main`, `Folder: / (root)`.
-4. Your website will be live in 1 minute at:
-   `https://rizwanbukhari-dev.github.io/portfolio`
+1. **LinkedIn Profile URL**:
+   In `index.html` and `js/config.js`, search for `https://www.linkedin.com/` and replace it with your direct personal LinkedIn profile URL once confirmed (e.g. `https://www.linkedin.com/in/your-username`).
+2. **Contact Email**:
+   Currently configured to `syedrizwanbukhari18@gmail.com`. You can update this in `index.html`, `js/config.js`, and `js/main.js` if you ever switch emails.
+3. **New Projects**:
+   Add new projects inside `js/config.js` and `index.html` within the `#projects` section using the `.project-card` structure.
+
+---
+
+## 🌐 Publishing Your Changes
+
+### 1. Push Changes to GitHub
+Since your local repository is already connected to `https://github.com/rizwanbukhari-dev/my-portfolio.git`:
+
+```bash
+git add .
+git commit -m "Redesign portfolio: modern minimalist developer UI, honest presentation, verified project links"
+git push origin main
+```
+
+### 2. Deploying to Vercel (Recommended — Free & Instant)
+1. Go to [https://vercel.com](https://vercel.com) and log in with your GitHub account.
+2. Click **"Add New..." > "Project"**.
+3. Import `my-portfolio` from your GitHub repositories.
+4. Leave all build settings at default (Root Directory: `./`, Framework: `Other`).
+5. Click **"Deploy"**. Vercel will give you a live production URL: [https://rizwanbukhari-1.vercel.app/](https://rizwanbukhari-1.vercel.app/).
+
+### 3. Deploying to GitHub Pages (Alternative — Free)
+1. In your GitHub repository (`rizwanbukhari-dev/my-portfolio`), go to **Settings > Pages**.
+2. Under **Build and deployment**, choose **Source: Deploy from a branch**.
+3. Select `Branch: main`, folder `/ (root)`, and click **Save**.
+4. Your website will be available at: `https://rizwanbukhari-dev.github.io/my-portfolio/`
 
 ---
 
