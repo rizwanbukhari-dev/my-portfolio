@@ -18,7 +18,7 @@ A modern, high-polish developer portfolio for **Syed Rizwan Bukhari**, Computer 
   - Responsive mobile slide-out drawer with numbered navigation entries (`01 Home` to `06 Contact`).
   - Consistent obsidian dark theme across all devices.
 - **Resume Download Feature**:
-  - Direct 1-click download of `assets/docs/resume.pdf` (saved as `Syed-Rizwan-Bukhari-Resume.pdf`), featuring verified student education, technical skills, and projects.
+  - Direct 1-click download of `assets/docs/Syed-Rizwan-Bukhari-Resume.pdf` (saved as `Syed-Rizwan-Bukhari-Resume.pdf`), featuring a professional, single-page ATS-friendly developer resume.
 - **Featured Projects**:
   - **PDFKit**: Web-based PDF utility application deployed on Vercel ([Live Demo](https://pdfkit-1.vercel.app/) | [Source Code](https://github.com/rizwanbukhari-dev/pdfkit.1)).
   - **Personal Developer Portfolio**: Modern vanilla HTML/CSS/JS portfolio codebase ([Live Demo](https://rizwanbukhari-1.vercel.app/) | [Source Code](https://github.com/rizwanbukhari-dev/my-portfolio)).
@@ -39,9 +39,12 @@ d:\rizwan-bukhari-protfolio\
 │   ├── config.js               # Central portfolio configuration & personal details
 │   ├── github.js               # Live GitHub REST API integration & fallback repository cards
 │   └── main.js                 # Navigation drawer, scrollspy, typewriter & contact handler
+├── scripts\
+│   └── generate_resume.py      # Automated generator for the recruiter-friendly PDF resume
 ├── assets\
 │   ├── docs\
-│   │   └── resume.pdf          # Verified PDF resume of Syed Rizwan Bukhari
+│   │   ├── Syed-Rizwan-Bukhari-Resume.pdf  # Professional recruiter-friendly PDF resume
+│   │   └── resume.pdf                      # Backward-compatible synchronized copy
 │   └── images\
 │       ├── rizwan-photo.jpg    # Verified photograph of Syed Rizwan Bukhari
 │       ├── avatar.jpg          # Avatar image
