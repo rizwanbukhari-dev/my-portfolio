@@ -15,6 +15,7 @@ const PORTFOLIO_CONFIG = {
     school: "HS Chewdara (Class 10th Completed)",
     location: "Budgam, Jammu and Kashmir, India",
     portfolioUrl: "https://rizwanbukhari-1.vercel.app/",
+    resumeUrl: "assets/docs/resume.pdf",
     primaryInterests: ["Web Development", "Python", "Linux"],
     bio: "I am a Computer Engineering diploma student currently in my 5th semester at Government Polytechnic College Ganderbal, based in Budgam, Jammu & Kashmir. I focus on building practical web applications, mastering Linux environments, writing clean Python scripts, and exploring cybersecurity fundamentals through hands-on practice.",
     longTermGoal: "My goal is to continue strengthening my engineering foundations, build reliable software tools that solve everyday user challenges, and grow into a skilled software and cybersecurity professional while pursuing higher education."

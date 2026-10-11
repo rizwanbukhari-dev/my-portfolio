@@ -1,84 +1,40 @@
 /**
- * Main Application Script
- * Syed Rizwan Bukhari - Developer Portfolio
- * Pure vanilla JavaScript with zero framework dependencies.
+ * Main Application Script — Syed Rizwan Bukhari Portfolio
+ * Polished Interactions, ScrollSpy, Drawer Menu, Typewriter & Scroll Reveal
+ * Pure Vanilla JavaScript — Zero heavy frameworks
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  initTheme();
+  // Enforce consistent obsidian dark theme
+  document.documentElement.setAttribute("data-theme", "dark");
+  try { localStorage.removeItem("portfolio_theme"); } catch (e) {}
+
   initNavigation();
   initScrollSpy();
+  initTypewriter();
+  initScrollReveal();
   initContactForm();
-  initResumeModal();
   updateDynamicYear();
 });
-
-/* -------------------------------------------------------------------
-   1. Theme Management (Dark / Light Theme)
-   ------------------------------------------------------------------- */
-function initTheme() {
-  const themeToggleBtn = document.getElementById("theme-toggle-btn");
-  const storedTheme = localStorage.getItem("portfolio_theme");
-  
-  // Default to dark theme as requested (deep navy / charcoal)
-  const preferredTheme = storedTheme || "dark";
-  document.documentElement.setAttribute("data-theme", preferredTheme);
-  updateThemeIcon(preferredTheme);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
-      const nextTheme = currentTheme === "dark" ? "light" : "dark";
-      
-      document.documentElement.setAttribute("data-theme", nextTheme);
-      localStorage.setItem("portfolio_theme", nextTheme);
-      updateThemeIcon(nextTheme);
-      showToast(`Switched to ${nextTheme === "dark" ? "Dark" : "Light"} Mode`, "info");
-    });
-  }
-}
-
-function updateThemeIcon(theme) {
-  const sunIcon = document.getElementById("theme-icon-sun");
-  const moonIcon = document.getElementById("theme-icon-moon");
-  const themeToggleBtn = document.getElementById("theme-toggle-btn");
-
-  if (themeToggleBtn) {
-    themeToggleBtn.setAttribute(
-      "aria-label",
-      theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
-    );
-  }
-
-  if (!sunIcon || !moonIcon) return;
-
-  if (theme === "light") {
-    sunIcon.style.display = "none";
-    moonIcon.style.display = "block";
-  } else {
-    sunIcon.style.display = "block";
-    moonIcon.style.display = "none";
-  }
-}
 
 /* -------------------------------------------------------------------
    2. Navigation, Sticky Header & Hamburger Drawer Menu
    ------------------------------------------------------------------- */
 function initNavigation() {
-  const navbar = document.getElementById("navbar");
+  const header = document.getElementById("header");
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const drawerCloseBtn = document.getElementById("drawer-close-btn");
   const navDrawer = document.getElementById("nav-drawer");
   const navBackdrop = document.getElementById("nav-backdrop");
-  const drawerLinks = document.querySelectorAll(".drawer-nav-link");
+  const navLinks = document.querySelectorAll(".nav__link, .drawer__nav-link");
 
-  // Sticky header shadow on scroll
+  // Sticky header on scroll
   window.addEventListener("scroll", () => {
-    if (!navbar) return;
-    if (window.scrollY > 20) {
-      navbar.classList.add("scrolled");
+    if (!header) return;
+    if (window.scrollY > 30) {
+      header.classList.add("scrolled");
     } else {
-      navbar.classList.remove("scrolled");
+      header.classList.remove("scrolled");
     }
   }, { passive: true });
 
@@ -136,12 +92,11 @@ function initNavigation() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeDrawer();
-      closeModal("modal-resume");
     }
   });
 
   // Smooth scroll and auto-close drawer on link click
-  drawerLinks.forEach(link => {
+  navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       const targetHref = link.getAttribute("href");
       if (targetHref && targetHref.startsWith("#")) {
@@ -150,15 +105,14 @@ function initNavigation() {
           e.preventDefault();
           closeDrawer();
           
-          const navHeight = navbar ? navbar.offsetHeight : 72;
-          const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+          const headerHeight = header ? header.offsetHeight : 74;
+          const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
           
           window.scrollTo({
             top: Math.max(0, targetPosition),
             behavior: "smooth"
           });
 
-          // Update hash without jumping
           history.pushState(null, "", targetHref);
         }
       }
@@ -167,17 +121,17 @@ function initNavigation() {
 }
 
 /* -------------------------------------------------------------------
-   3. ScrollSpy: Highlight Active Nav Link on Scroll
+   3. ScrollSpy: Highlight Active Nav Link
    ------------------------------------------------------------------- */
 function initScrollSpy() {
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".drawer-nav-link, .nav-link");
+  const navLinks = document.querySelectorAll(".nav__link, .drawer__nav-link");
 
   if (!sections.length || !navLinks.length) return;
 
   const observerOptions = {
     root: null,
-    rootMargin: "-25% 0px -65% 0px",
+    rootMargin: "-20% 0px -60% 0px",
     threshold: 0
   };
 
@@ -200,7 +154,76 @@ function initScrollSpy() {
 }
 
 /* -------------------------------------------------------------------
-   4. Contact Form Validation & Submission
+   4. Rotating Typewriter Headline (Inspired by abrarahmad.codes)
+   ------------------------------------------------------------------- */
+function initTypewriter() {
+  const typewriterEl = document.getElementById("home-typewriter");
+  if (!typewriterEl) return;
+
+  const roles = [
+    "Computer Engineering Student",
+    "Web Utility Developer",
+    "Python & Automation Explorer",
+    "Linux CLI Enthusiast"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function type() {
+    const currentRole = roles[roleIndex];
+
+    if (isDeleting) {
+      typewriterEl.textContent = currentRole.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typewriterEl.textContent = currentRole.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      isDeleting = true;
+      typingSpeed = 2000; // Pause at end of word
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      typingSpeed = 400; // Pause before typing next word
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  type();
+}
+
+/* -------------------------------------------------------------------
+   5. Scroll Reveal Effect
+   ------------------------------------------------------------------- */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  if (!revealElements.length) return;
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+}
+
+/* -------------------------------------------------------------------
+   6. Contact Form Validation & Mailto Trigger
    ------------------------------------------------------------------- */
 function initContactForm() {
   const contactForm = document.getElementById("contact-form");
@@ -252,19 +275,18 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    // Form is valid: prepare mailto client launch and visual confirmation
-    const name = encodeURIComponent(nameInput.value.trim());
-    const email = encodeURIComponent(emailInput.value.trim());
+    // Build Mailto URL
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
     const subject = encodeURIComponent(subjectInput.value.trim());
-    const message = encodeURIComponent(
-      `Hello Syed Rizwan,\n\n${messageInput.value.trim()}\n\nBest regards,\n${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}`
-    );
+    const rawMessage = `Hello Syed Rizwan,\n\n${messageInput.value.trim()}\n\nFrom: ${name}\nEmail: ${email}`;
+    const encodedMessage = encodeURIComponent(rawMessage);
 
     const targetEmail = (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.contact && window.PORTFOLIO_CONFIG.contact.email)
       ? window.PORTFOLIO_CONFIG.contact.email
       : "syedrizwanbukhari18@gmail.com";
 
-    const mailtoUrl = `mailto:${targetEmail}?subject=${subject}&body=${message}`;
+    const mailtoUrl = `mailto:${targetEmail}?subject=${subject}&body=${encodedMessage}`;
 
     if (submitBtn) {
       const originalText = submitBtn.innerHTML;
@@ -273,7 +295,7 @@ function initContactForm() {
 
       setTimeout(() => {
         window.location.href = mailtoUrl;
-        showToast("Opening your default mail client with pre-filled message.", "success");
+        showToast("Opening default email client with your prefilled message.", "success");
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         contactForm.reset();
@@ -291,7 +313,7 @@ function initContactForm() {
 function showFieldError(input, msg) {
   if (!input) return;
   input.classList.add("input-error");
-  const parent = input.closest(".form-group");
+  const parent = input.closest(".form__group");
   if (parent) {
     let errEl = parent.querySelector(".form-error-msg");
     if (!errEl) {
@@ -307,7 +329,7 @@ function showFieldError(input, msg) {
 function clearFieldError(input) {
   if (!input) return;
   input.classList.remove("input-error");
-  const parent = input.closest(".form-group");
+  const parent = input.closest(".form__group");
   if (parent) {
     const errEl = parent.querySelector(".form-error-msg");
     if (errEl) {
@@ -317,58 +339,20 @@ function clearFieldError(input) {
 }
 
 /* -------------------------------------------------------------------
-   5. Printable Resume Modal
+   7. Copy Email Helper
    ------------------------------------------------------------------- */
-function initResumeModal() {
-  const openButtons = document.querySelectorAll("[data-open-resume]");
-  const modalResume = document.getElementById("modal-resume");
-  const printBtn = document.getElementById("resume-print-btn");
-
-  openButtons.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal("modal-resume");
-    });
-  });
-
-  const closeButtons = document.querySelectorAll("[data-close-resume]");
-  closeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      closeModal("modal-resume");
-    });
-  });
-
-  if (modalResume) {
-    modalResume.addEventListener("click", (e) => {
-      if (e.target === modalResume) {
-        closeModal("modal-resume");
-      }
-    });
+function copyEmailToClipboard(email = "syedrizwanbukhari18@gmail.com") {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(email)
+      .then(() => showToast(`Copied ${email} to clipboard!`, "success"))
+      .catch(() => showToast(`Email: ${email}`, "info"));
+  } else {
+    showToast(`Email: ${email}`, "info");
   }
-
-  if (printBtn) {
-    printBtn.addEventListener("click", () => {
-      window.print();
-    });
-  }
-}
-
-function openModal(id) {
-  const modal = document.getElementById(id);
-  if (!modal) return;
-  modal.classList.add("is-active");
-  document.body.style.overflow = "hidden";
-}
-
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  if (!modal) return;
-  modal.classList.remove("is-active");
-  document.body.style.overflow = "";
 }
 
 /* -------------------------------------------------------------------
-   6. Dynamic Copyright Year
+   8. Dynamic Copyright Year
    ------------------------------------------------------------------- */
 function updateDynamicYear() {
   const currentYear = new Date().getFullYear();
@@ -379,7 +363,7 @@ function updateDynamicYear() {
 }
 
 /* -------------------------------------------------------------------
-   7. Clean Lightweight Toast System
+   9. Lightweight Toast Notification
    ------------------------------------------------------------------- */
 function showToast(message, type = "info") {
   let toastContainer = document.getElementById("toast-container");
@@ -393,18 +377,14 @@ function showToast(message, type = "info") {
 
   const toast = document.createElement("div");
   toast.className = `toast toast-${type}`;
-  toast.innerHTML = `
-    <span class="toast-text">${message}</span>
-  `;
+  toast.innerHTML = `<span>${message}</span>`;
 
   toastContainer.appendChild(toast);
 
-  // Trigger animation
   requestAnimationFrame(() => {
     toast.classList.add("is-visible");
   });
 
-  // Auto remove
   setTimeout(() => {
     toast.classList.remove("is-visible");
     setTimeout(() => {
@@ -415,7 +395,6 @@ function showToast(message, type = "info") {
   }, 3200);
 }
 
-// Global expose
+// Global exports
 window.showToast = showToast;
-window.openModal = openModal;
-window.closeModal = closeModal;
+window.copyEmailToClipboard = copyEmailToClipboard;
