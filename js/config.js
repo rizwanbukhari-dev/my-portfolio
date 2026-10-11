@@ -15,7 +15,7 @@ const PORTFOLIO_CONFIG = {
     school: "HS Chewdara (Class 10th Completed)",
     location: "Budgam, Jammu and Kashmir, India",
     portfolioUrl: "https://rizwanbukhari-1.vercel.app/",
-    primaryInterests: ["Web Development", "Python", "Linux", "Ethical Hacking"],
+    primaryInterests: ["Web Development", "Python", "Linux"],
     bio: "I am a Computer Engineering diploma student currently in my 5th semester at Government Polytechnic College Ganderbal, based in Budgam, Jammu & Kashmir. I focus on building practical web applications, mastering Linux environments, writing clean Python scripts, and exploring cybersecurity fundamentals through hands-on practice.",
     longTermGoal: "My goal is to continue strengthening my engineering foundations, build reliable software tools that solve everyday user challenges, and grow into a skilled software and cybersecurity professional while pursuing higher education."
   },
@@ -80,8 +80,7 @@ const PORTFOLIO_CONFIG = {
       description: "Operating system workflows and security fundamentals (Active Learning).",
       items: [
         { name: "Linux CLI", level: "Working Knowledge", badge: "Shell & Bash Basics" },
-        { name: "Cybersecurity Fundamentals", level: "Learning / Beginner", badge: "Security Principles" },
-        { name: "Ethical Hacking Concepts", level: "Learning / Beginner", badge: "Lab Study" }
+        { name: "Cybersecurity Fundamentals", level: "Learning / Beginner", badge: "Security Principles" }
       ]
     }
   ],
@@ -172,8 +171,8 @@ const PORTFOLIO_CONFIG = {
     },
     {
       phase: "06",
-      title: "Cybersecurity & Ethical Hacking Exploration",
-      description: "Developing a grounded understanding of computer security fundamentals, network defense protocols, threat concepts, and reconnaissance basics in safe laboratory environments."
+      title: "Cybersecurity Exploration",
+      description: "Developing a grounded understanding of computer security fundamentals, network defense protocols, and core security concepts in safe laboratory environments."
     }
   ]
 };
