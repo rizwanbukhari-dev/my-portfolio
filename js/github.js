@@ -9,22 +9,22 @@ const GITHUB_USERNAME = "rizwanbukhari-dev";
 // Curated authentic repositories shown if GitHub API is rate-limited or offline
 const FALLBACK_REPOSITORIES = [
   {
-    name: "RizKey",
-    description: "A typing practice web application designed to help users improve typing speed, accuracy, and consistency. Built with React and TypeScript.",
-    language: "TypeScript",
-    stars: 0,
-    forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}/RizKey`,
-    liveDemo: ""
-  },
-  {
     name: "Riznex",
     description: "A web project focused on a clean, professional experience and useful features. Built with React, TypeScript, and Vite.",
     language: "TypeScript",
     stars: 0,
     forks: 0,
     url: `https://github.com/${GITHUB_USERNAME}/Riznex`,
-    liveDemo: ""
+    liveDemo: "https://riznex.vercel.app/"
+  },
+  {
+    name: "RizKey",
+    description: "A typing practice web application designed to help users improve typing speed, accuracy, and consistency. Built with React and TypeScript.",
+    language: "TypeScript",
+    stars: 0,
+    forks: 0,
+    url: `https://github.com/${GITHUB_USERNAME}/RizKey`,
+    liveDemo: "https://rizkey-1.vercel.app/"
   },
   {
     name: "pdfkit.1",

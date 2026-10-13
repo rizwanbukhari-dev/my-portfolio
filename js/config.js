@@ -106,39 +106,39 @@ const PORTFOLIO_CONFIG = {
       ]
     },
     {
-      id: "rizkey",
-      title: "RizKey",
-      tagline: "Find your rhythm. Master your keys.",
-      description: "A typing practice web application designed to help users improve typing speed, accuracy, and consistency. Built with React and TypeScript, featuring real-time WPM calculation, an interactive virtual keyboard, and targeted error practice drills.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Web Audio API"],
-      image: "assets/images/project-rizkey.jpg",
-      status: "Active Repository",
-      statusClass: "status-repo",
-      liveUrl: "",
-      githubUrl: "https://github.com/rizwanbukhari-dev/RizKey",
-      highlights: [
-        "Real-time WPM, raw speed, and accuracy calculations",
-        "Interactive virtual QWERTY keyboard with finger placement zones",
-        "Targeted practice drills and weak-key error tracking",
-        "Responsive, modern typing interface built with React & Vite"
-      ]
-    },
-    {
       id: "riznex",
       title: "Riznex",
       tagline: "Clean & Professional Experience",
       description: "A web project focused on a clean, professional experience and useful features. Built with modern React, TypeScript, and Vite, delivering an intuitive interface with workflow pipelines, real-time observability telemetry, and modular architecture.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       image: "assets/images/project-riznex.jpg",
-      status: "Active Repository",
-      statusClass: "status-repo",
-      liveUrl: "",
+      status: "Live Application",
+      statusClass: "status-live",
+      liveUrl: "https://riznex.vercel.app/",
       githubUrl: "https://github.com/rizwanbukhari-dev/Riznex",
       highlights: [
         "Clean, professional modern user experience",
         "Interactive workflow pipelines and execution telemetry",
         "Modular architecture engineered with TypeScript and Vite",
         "Dark-mode first interface with responsive layout"
+      ]
+    },
+    {
+      id: "rizkey",
+      title: "RizKey",
+      tagline: "Find your rhythm. Master your keys.",
+      description: "A typing practice web application designed to help users improve typing speed, accuracy, and consistency. Built with React and TypeScript, featuring real-time WPM calculation, an interactive virtual keyboard, and targeted error practice drills.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Web Audio API"],
+      image: "assets/images/project-rizkey.jpg",
+      status: "Live Application",
+      statusClass: "status-live",
+      liveUrl: "https://rizkey-1.vercel.app/",
+      githubUrl: "https://github.com/rizwanbukhari-dev/RizKey",
+      highlights: [
+        "Real-time WPM, raw speed, and accuracy calculations",
+        "Interactive virtual QWERTY keyboard with finger placement zones",
+        "Targeted practice drills and weak-key error tracking",
+        "Responsive, modern typing interface built with React & Vite"
       ]
     }
   ],
