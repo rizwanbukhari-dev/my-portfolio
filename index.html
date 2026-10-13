@@ -7,7 +7,7 @@
   
   <!-- SEO & Accessibility Metadata -->
   <meta name="description" content="Personal developer portfolio of Syed Rizwan Bukhari — Computer Engineering diploma student (5th Semester) at Government Polytechnic College Ganderbal, based in Budgam, Jammu &amp; Kashmir. Focused on web development, Python, and Linux.">
-  <meta name="keywords" content="Syed Rizwan Bukhari, Rizwan Bukhari, Developer Portfolio, Computer Engineering, Budgam, Jammu and Kashmir, Ganderbal, Web Development, Python, Linux CLI, PDFKit">
+  <meta name="keywords" content="Syed Rizwan Bukhari, Rizwan Bukhari, Developer Portfolio, Computer Engineering, Budgam, Jammu and Kashmir, Ganderbal, Web Development, Python, Linux CLI, PDFKit, RizKey, Riznex">
   <meta name="author" content="Syed Rizwan Bukhari">
   <meta name="theme-color" content="#08090d">
 
@@ -345,7 +345,7 @@
 
           <div class="projects__grid">
             <!-- Project 01: PDFKit -->
-            <article class="project__card reveal-on-scroll delay-1" id="project-pdfkit">
+            <article class="project__card reveal-on-scroll delay-1" id="project-pdfkit" data-href="https://pdfkit-1.vercel.app/" tabindex="0" role="link" aria-label="PDFKit - Web-Based PDF Utility Application">
               <div class="project__thumb">
                 <img src="assets/images/project-pdfshub.jpg" alt="PDFKit Web Application User Interface" width="560" height="280" loading="lazy">
                 <span class="badge badge-emerald project__badge-overlay">
@@ -358,6 +358,7 @@
                   <span class="project__category">Web Utility Application</span>
                 </div>
                 <h3 class="project__title">PDFKit</h3>
+                <p class="project__tagline">Web-Based PDF &amp; Document Utility</p>
                 <p class="project__description">
                   A lightweight, web-based utility application designed to solve common document management tasks for students, educators, and CSC operators. Features implemented include merging multiple PDFs into a single file, page splitting, compression, and image-to-PDF conversion with client-side processing for speed and privacy.
                 </p>
@@ -381,37 +382,70 @@
               </div>
             </article>
 
-            <!-- Project 02: Personal Developer Portfolio -->
-            <article class="project__card reveal-on-scroll delay-2" id="project-portfolio">
+            <!-- Project 02: RizKey -->
+            <article class="project__card reveal-on-scroll delay-2" id="project-rizkey" data-href="https://github.com/rizwanbukhari-dev/RizKey" tabindex="0" role="link" aria-label="RizKey - Touch-Typing Practice Web Application">
               <div class="project__thumb">
-                <img src="assets/images/rizwan-photo.jpg" alt="Personal Developer Portfolio Preview" width="560" height="280" loading="lazy">
+                <img src="assets/images/project-rizkey.jpg" alt="RizKey Touch-Typing Web Application Interface" width="560" height="280" loading="lazy">
                 <span class="badge badge-purple project__badge-overlay">
-                  <span class="pulse-dot"></span> Active Codebase
+                  <span class="pulse-dot" style="background-color: var(--accent-purple);"></span> Active Repository
                 </span>
               </div>
               <div class="project__content">
                 <div class="project__meta-row">
                   <span class="project__number">02</span>
-                  <span class="project__category">Frontend Architecture</span>
+                  <span class="project__category">Typing Practice Web App</span>
                 </div>
-                <h3 class="project__title">Personal Developer Portfolio</h3>
+                <h3 class="project__title">RizKey</h3>
+                <p class="project__tagline">Find your rhythm. Master your keys.</p>
                 <p class="project__description">
-                  A modern, high-performance personal developer portfolio built with semantic HTML5, modern vanilla CSS3, and vanilla JavaScript. Features a dark/light design system, dynamic GitHub repository activity integration, keyboard accessibility, and zero external framework dependencies. Deployed on Vercel.
+                  A typing practice web application designed to help users improve typing speed, accuracy, and consistency. Built with React and TypeScript, featuring real-time WPM calculation, an interactive virtual keyboard, and targeted error practice drills.
                 </p>
                 <div class="project__tech-row">
-                  <span class="project__tech-pill"><i class="devicon-html5-plain colored"></i> HTML5</span>
-                  <span class="project__tech-pill"><i class="devicon-css3-plain colored"></i> Vanilla CSS3</span>
-                  <span class="project__tech-pill"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-                  <span class="project__tech-pill"><i class="ri-cloud-line" style="color: #38bdf8;"></i> Vercel</span>
+                  <span class="project__tech-pill"><i class="devicon-react-original colored"></i> React</span>
+                  <span class="project__tech-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                  <span class="project__tech-pill"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                  <span class="project__tech-pill"><i class="devicon-vite-plain colored"></i> Vite</span>
+                  <span class="project__tech-pill"><i class="ri-keyboard-line" style="color: #a78bfa;"></i> Web Audio</span>
                 </div>
                 <div class="project__cta">
-                  <a href="https://rizwanbukhari-1.vercel.app/" target="_blank" rel="noopener noreferrer" class="button button__primary button__sm">
-                    <span>Live Demo</span>
+                  <a href="https://github.com/rizwanbukhari-dev/RizKey" target="_blank" rel="noopener noreferrer" class="button button__primary button__sm">
+                    <i class="ri-github-line"></i>
+                    <span>GitHub Repository</span>
                     <i class="ri-external-link-line"></i>
                   </a>
-                  <a href="https://github.com/rizwanbukhari-dev/my-portfolio" target="_blank" rel="noopener noreferrer" class="button button__ghost button__sm">
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 03: Riznex -->
+            <article class="project__card reveal-on-scroll delay-3" id="project-riznex" data-href="https://github.com/rizwanbukhari-dev/Riznex" tabindex="0" role="link" aria-label="Riznex - Web Project">
+              <div class="project__thumb">
+                <img src="assets/images/project-riznex.jpg" alt="Riznex Web Project User Interface" width="560" height="280" loading="lazy">
+                <span class="badge badge-blue project__badge-overlay">
+                  <span class="pulse-dot" style="background-color: var(--accent-blue);"></span> Active Repository
+                </span>
+              </div>
+              <div class="project__content">
+                <div class="project__meta-row">
+                  <span class="project__number">03</span>
+                  <span class="project__category">Web Application</span>
+                </div>
+                <h3 class="project__title">Riznex</h3>
+                <p class="project__tagline">Clean &amp; Professional Experience</p>
+                <p class="project__description">
+                  A web project focused on a clean, professional experience and useful features. Built with modern React, TypeScript, and Vite, delivering an intuitive interface with workflow pipelines, real-time observability telemetry, and modular architecture.
+                </p>
+                <div class="project__tech-row">
+                  <span class="project__tech-pill"><i class="devicon-react-original colored"></i> React</span>
+                  <span class="project__tech-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                  <span class="project__tech-pill"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                  <span class="project__tech-pill"><i class="devicon-vite-plain colored"></i> Vite</span>
+                </div>
+                <div class="project__cta">
+                  <a href="https://github.com/rizwanbukhari-dev/Riznex" target="_blank" rel="noopener noreferrer" class="button button__primary button__sm">
                     <i class="ri-github-line"></i>
-                    <span>Source Code</span>
+                    <span>GitHub Repository</span>
+                    <i class="ri-external-link-line"></i>
                   </a>
                 </div>
               </div>

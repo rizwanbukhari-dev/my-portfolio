@@ -21,7 +21,8 @@ A modern, high-polish developer portfolio for **Syed Rizwan Bukhari**, Computer 
   - Direct 1-click download of `assets/docs/Syed-Rizwan-Bukhari-Resume.pdf` (saved as `Syed-Rizwan-Bukhari-Resume.pdf`), featuring a professional, single-page ATS-friendly developer resume.
 - **Featured Projects**:
   - **PDFKit**: Web-based PDF utility application deployed on Vercel ([Live Demo](https://pdfkit-1.vercel.app/) | [Source Code](https://github.com/rizwanbukhari-dev/pdfkit.1)).
-  - **Personal Developer Portfolio**: Modern vanilla HTML/CSS/JS portfolio codebase ([Live Demo](https://rizwanbukhari-1.vercel.app/) | [Source Code](https://github.com/rizwanbukhari-dev/my-portfolio)).
+  - **RizKey**: Typing practice web application with real-time WPM calculation, accuracy tracking, and virtual keyboard ([GitHub Repository](https://github.com/rizwanbukhari-dev/RizKey)).
+  - **Riznex**: Modern web project focused on clean, professional experience, workflow pipelines, and modular architecture ([GitHub Repository](https://github.com/rizwanbukhari-dev/Riznex)).
 - **Live GitHub Activity**: Real-time integration with GitHub REST API dynamically showcasing public repositories from [@rizwanbukhari-dev](https://github.com/rizwanbukhari-dev) with graceful fallbacks.
 - **Authentic Presentation**: Accurate representation of educational background (5th Semester Computer Engineering Diploma, Govt. Polytechnic College Ganderbal) with honest skills and genuine projects (zero fabricated experience or inflated claims).
 - **Fast & Zero-Bloat**: Built with pure semantic HTML5, modern vanilla CSS3, and JavaScript — loads instantly with zero heavy runtime frameworks.
@@ -48,7 +49,9 @@ d:\rizwan-bukhari-protfolio\
 │   └── images\
 │       ├── rizwan-photo.jpg    # Verified photograph of Syed Rizwan Bukhari
 │       ├── avatar.jpg          # Avatar image
-│       └── project-pdfshub.jpg # PDFKit project preview interface
+│       ├── project-pdfshub.jpg # PDFKit project preview interface
+│       ├── project-rizkey.jpg  # RizKey project preview interface
+│       └── project-riznex.jpg  # Riznex project preview interface
 └── README.md                   # Project documentation
 ```
 

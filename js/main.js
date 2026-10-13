@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollSpy();
   initTypewriter();
   initScrollReveal();
+  initProjectCards();
   initContactForm();
   updateDynamicYear();
 });
@@ -395,6 +396,46 @@ function showToast(message, type = "info") {
   }, 3200);
 }
 
+/* -------------------------------------------------------------------
+   10. Interactive Project Cards
+   ------------------------------------------------------------------- */
+function initProjectCards() {
+  const cards = document.querySelectorAll(".project__card");
+
+  cards.forEach(card => {
+    // Prevent button and link clicks inside the card from triggering card-level navigation
+    const innerLinks = card.querySelectorAll("a, button");
+    innerLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    });
+
+    // Card click triggers navigation to data-href
+    card.addEventListener("click", (e) => {
+      // If user clicked directly on or within an inner link/button, let that element handle it
+      if (e.target.closest("a, button")) return;
+      const href = card.getAttribute("data-href");
+      if (href) {
+        window.open(href, "_blank", "noopener,noreferrer");
+      }
+    });
+
+    // Accessible keyboard navigation (Enter key)
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        if (e.target.closest("a, button")) return;
+        const href = card.getAttribute("data-href");
+        if (href) {
+          e.preventDefault();
+          window.open(href, "_blank", "noopener,noreferrer");
+        }
+      }
+    });
+  });
+}
+
 // Global exports
 window.showToast = showToast;
 window.copyEmailToClipboard = copyEmailToClipboard;
+window.initProjectCards = initProjectCards;

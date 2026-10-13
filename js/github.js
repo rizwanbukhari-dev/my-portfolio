@@ -9,6 +9,24 @@ const GITHUB_USERNAME = "rizwanbukhari-dev";
 // Curated authentic repositories shown if GitHub API is rate-limited or offline
 const FALLBACK_REPOSITORIES = [
   {
+    name: "RizKey",
+    description: "A typing practice web application designed to help users improve typing speed, accuracy, and consistency. Built with React and TypeScript.",
+    language: "TypeScript",
+    stars: 0,
+    forks: 0,
+    url: `https://github.com/${GITHUB_USERNAME}/RizKey`,
+    liveDemo: ""
+  },
+  {
+    name: "Riznex",
+    description: "A web project focused on a clean, professional experience and useful features. Built with React, TypeScript, and Vite.",
+    language: "TypeScript",
+    stars: 0,
+    forks: 0,
+    url: `https://github.com/${GITHUB_USERNAME}/Riznex`,
+    liveDemo: ""
+  },
+  {
     name: "pdfkit.1",
     description: "A lightweight, web-based PDF and document utility application for merging, splitting, and converting documents. Deployed on Vercel.",
     language: "JavaScript",
@@ -25,24 +43,6 @@ const FALLBACK_REPOSITORIES = [
     forks: 0,
     url: `https://github.com/${GITHUB_USERNAME}/my-portfolio`,
     liveDemo: "https://rizwanbukhari-1.vercel.app/"
-  },
-  {
-    name: "python-practical-work",
-    description: "Python scripts exploring programming logic, laboratory problem sets, automation routines, and data structures.",
-    language: "Python",
-    stars: 0,
-    forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`,
-    liveDemo: ""
-  },
-  {
-    name: "linux-cli-notes",
-    description: "Practical documentation, bash command references, file system permissions, and shell scripting guides for engineering students.",
-    language: "Shell",
-    stars: 0,
-    forks: 0,
-    url: `https://github.com/${GITHUB_USERNAME}`,
-    liveDemo: ""
   }
 ];
 

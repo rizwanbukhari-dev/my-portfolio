@@ -1070,13 +1070,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .projects__grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
@@ -1090,6 +1097,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   transition: all 0.35s ease;
   position: relative;
+  cursor: pointer;
 }
 
 .project__card:hover {
@@ -1098,11 +1106,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(167, 139, 250, 0.35);
 }
 
+.project__card:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 4px;
+}
+
 /* Project Image Frame */
 .project__thumb {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
   background: #141722;
 }
@@ -1126,7 +1139,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Project Content */
 .project__content {
-  padding: 1.8rem;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1159,8 +1172,18 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-white);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.4rem;
   line-height: 1.3;
+}
+
+.project__tagline {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-purple);
+  font-family: var(--font-mono);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 .project__description {
@@ -1199,9 +1222,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Action Links */
 .project__cta {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.65rem;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: auto;
+}
+
+.project__cta a,
+.project__cta button {
+  cursor: pointer;
 }
 
 /* GitHub Live Activity Card */
